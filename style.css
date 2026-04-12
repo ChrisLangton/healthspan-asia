@@ -354,6 +354,10 @@ section { padding: 96px 0; }
   line-height: 1.15;
 }
 
+.hero-dot {
+  color: var(--sage-light);
+}
+
 .hero-sub {
   color: rgba(245,240,230,0.7);
   font-size: 1.1rem;
