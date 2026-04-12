@@ -1869,54 +1869,132 @@ section { padding: 96px 0; }
    RESPONSIVE
    ============================ */
 @media (max-width: 1100px) {
-  .affects-grid { grid-template-columns: repeat(4, 1fr); }
-  .services-grid { grid-template-columns: repeat(3, 1fr); }
+  .affects-grid   { grid-template-columns: repeat(4, 1fr); }
+  .services-grid  { grid-template-columns: repeat(3, 1fr); }
 }
 
 @media (max-width: 900px) {
-  .affects-grid { grid-template-columns: repeat(3, 1fr); }
-  .objectives-grid { grid-template-columns: repeat(3, 1fr); }
-  .how-grid { grid-template-columns: repeat(2, 1fr); }
+  .affects-grid   { grid-template-columns: repeat(3, 1fr); }
+  .objectives-grid { grid-template-columns: repeat(2, 1fr); }
+  .how-grid       { grid-template-columns: repeat(2, 1fr); }
   .personal-cards { grid-template-columns: 1fr; }
   .testimonials-grid { grid-template-columns: 1fr 1fr; }
   .testimonials-grid .testimonial-card.featured { grid-column: span 2; }
-  .services-grid { grid-template-columns: repeat(2, 1fr); }
+  .services-grid  { grid-template-columns: repeat(2, 1fr); }
   .dimensions-row { grid-template-columns: 1fr; }
 }
 
+/* ── Tablet / large mobile ── */
 @media (max-width: 768px) {
-  section { padding: 64px 0; }
-  .section-header { margin-bottom: 40px; }
+  section { padding: 56px 0; }
+  .section-header { margin-bottom: 36px; }
+  .section-header h2 { font-size: clamp(1.5rem, 5vw, 2rem); }
 
+  /* Nav */
   .nav-links, .btn-nav { display: none; }
   .hamburger { display: flex; }
 
-  .hero-cta-group { flex-direction: column; align-items: flex-start; }
-  .hero-trust { gap: 18px; }
+  /* Hero */
+  .hero { padding: 100px 0 64px; min-height: auto; }
+  .hero-headline { font-size: clamp(2.2rem, 9vw, 3.2rem); }
+  .hero-sub { font-size: 1rem; }
+  .hero-cta-group {
+    flex-direction: column;
+    align-items: stretch; /* full-width buttons on mobile */
+    gap: 12px;
+  }
+  .hero-cta-group .btn { text-align: center; }
+
+  /* Trust bar — row of 3, centred */
+  .hero-trust {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px 32px;
+    margin-top: 40px;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  .trust-item { align-items: flex-start; }
   .trust-divider { display: none; }
   .hero-scroll-hint { display: none; }
 
-  .empathy-inner { grid-template-columns: 1fr; gap: 36px; }
-  .healthspan-split { grid-template-columns: 1fr; gap: 40px; }
-  .affects-grid { grid-template-columns: repeat(2, 1fr); }
-  .objectives-grid { grid-template-columns: repeat(2, 1fr); }
-  .how-grid { grid-template-columns: 1fr; }
-  .about-inner { grid-template-columns: 1fr; gap: 48px; }
-  .about-stat-card { right: 0; }
-  .testimonials-grid { grid-template-columns: 1fr; }
+  /* Content sections */
+  .empathy-inner      { grid-template-columns: 1fr; gap: 32px; }
+  .empathy-cards      { grid-template-columns: 1fr 1fr; }
+  .healthspan-split   { grid-template-columns: 1fr; gap: 36px; }
+  .affects-grid       { grid-template-columns: repeat(2, 1fr); }
+  .how-grid           { grid-template-columns: 1fr; }
+  .about-inner        { grid-template-columns: 1fr; gap: 44px; }
+  .about-stat-card    { right: 0; bottom: -16px; }
+  .about-img-placeholder { aspect-ratio: 3/2; } /* less tall on mobile */
+  .testimonials-grid  { grid-template-columns: 1fr; }
   .testimonials-grid .testimonial-card.featured { grid-column: span 1; }
-  .form-row { grid-template-columns: 1fr; }
-  .footer-inner { grid-template-columns: 1fr; gap: 36px; }
-  .footer-links { grid-template-columns: repeat(2, 1fr); }
-  .proof-inner { gap: 28px; }
-  .objectives-cta { flex-direction: column; text-align: center; }
+  .testimonial-card   { padding: 24px; }
+  .form-row           { grid-template-columns: 1fr; }
+  .footer-inner       { grid-template-columns: 1fr; gap: 36px; }
+  .footer-links       { grid-template-columns: repeat(2, 1fr); }
+  .proof-inner        { gap: 24px 40px; flex-wrap: wrap; }
+  .objectives-cta     { flex-direction: column; text-align: center; }
+
+  /* Healthspan chart */
+  .hs-bar-name { width: 72px; font-size: 0.78rem; }
+  .hs-bar-end  { font-size: 0.72rem; }
+
+  /* Nature waves — reduce height on mobile */
+  .nature-wave-top, .nature-wave-bottom { height: 36px; }
 }
 
+/* ── Small mobile ── */
 @media (max-width: 520px) {
-  .services-grid { grid-template-columns: 1fr; }
-  .empathy-cards { grid-template-columns: 1fr; }
-  .affects-grid { grid-template-columns: 1fr; }
+  section { padding: 48px 0; }
+  .container { padding: 0 20px; }
+
+  /* Hero */
+  .hero-headline { font-size: clamp(2rem, 10vw, 2.6rem); }
+  .hero-badge    { font-size: 0.66rem; }
+  .hero-trust    { gap: 16px 24px; }
+  .trust-num     { font-size: 1.4rem; }
+  .trust-label   { font-size: 0.66rem; }
+
+  /* Grids → single column */
+  .services-grid   { grid-template-columns: 1fr; }
+  .empathy-cards   { grid-template-columns: 1fr; }
+  .affects-grid    { grid-template-columns: 1fr; }
   .objectives-grid { grid-template-columns: 1fr; }
-  .footer-links { grid-template-columns: 1fr; }
-  .hero-trust { flex-direction: column; gap: 14px; }
+  .footer-links    { grid-template-columns: 1fr; }
+  .dimensions-row  { grid-template-columns: 1fr; }
+
+  /* Objectives */
+  .objective-card  { padding: 18px 16px; }
+
+  /* Services & cards */
+  .service-card, .affect-card { padding: 22px 18px; }
+  .dimension-card { padding: 28px 22px; }
+
+  /* Personal cards — reduce padding */
+  .personal-card { padding: 28px 22px; }
+
+  /* Testimonials */
+  .testimonial-card { padding: 20px; }
+  .testimonial-quote { font-size: 3.5rem; }
+
+  /* Proof bar */
+  .proof-inner    { flex-direction: column; align-items: center; gap: 20px; }
+  .proof-item     { max-width: 100%; }
+
+  /* Footer */
+  .footer-bottom .container { flex-direction: column; align-items: flex-start; gap: 8px; }
+
+  /* About image less tall */
+  .about-img-placeholder { aspect-ratio: 4/3; }
+  .about-stat-card { position: static; margin-top: 16px; }
+
+  /* FAQ */
+  .faq-question { font-size: 0.88rem; padding: 16px 18px; }
+  .faq-answer p { padding: 12px 18px 18px; font-size: 0.86rem; }
+
+  /* Glossary */
+  .glossary-term { font-size: 0.88rem; padding: 16px 18px; }
+  .glossary-def p { font-size: 0.86rem; padding: 12px 18px 18px; }
+  .glossary-note { padding: 16px 18px; }
 }
