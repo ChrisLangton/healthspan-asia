@@ -177,7 +177,88 @@ document.querySelectorAll(animateSelectors.join(',')).forEach((el, i) => {
 });
 
 /* ============================
-   HERO CANVAS — FLOATING PARTICLES
+   SERVICES CAROUSEL
+   ============================ */
+(function initServicesCarousel() {
+  const wrap    = document.getElementById('servicesWrap');
+  const track   = document.getElementById('servicesTrack');
+  const prevBtn = document.getElementById('svcPrev');
+  const nextBtn = document.getElementById('svcNext');
+  const fill    = document.getElementById('svcProgressFill');
+  const counter = document.getElementById('svcCounter');
+  if (!track) return;
+
+  const cards = Array.from(track.querySelectorAll('.service-card'));
+  const total = cards.length;
+  let index = 0;
+
+  function visibleCount() {
+    // Read how many cards fit by checking card width vs wrapper width
+    const cardW = cards[0].offsetWidth;
+    const wrapW = wrap.offsetWidth;
+    const gap   = 16;
+    return Math.round((wrapW + gap) / (cardW + gap));
+  }
+
+  function maxIndex() {
+    return Math.max(0, total - visibleCount());
+  }
+
+  const outer = track.closest('.services-carousel-outer');
+
+  function update(animate) {
+    if (!animate) track.style.transition = 'none';
+    const cardW  = cards[0].offsetWidth;
+    const gap    = 16;
+    const offset = index * (cardW + gap);
+    track.style.transform = `translateX(-${offset}px)`;
+    if (!animate) {
+      track.offsetHeight; // force reflow
+      track.style.transition = '';
+    }
+
+    const vis   = visibleCount();
+    const last  = Math.min(index + vis, total);
+    const pct   = (last / total) * 100;
+    fill.style.width    = pct + '%';
+    counter.textContent = `${index + 1}\u2013${last} of ${total}`;
+    prevBtn.disabled    = index === 0;
+    nextBtn.disabled    = index >= maxIndex();
+
+    // Show/hide right-edge fade based on whether more slides exist
+    if (outer) outer.classList.toggle('at-end', index >= maxIndex());
+  }
+
+  prevBtn.addEventListener('click', () => {
+    if (index > 0) { index--; update(true); }
+  });
+  nextBtn.addEventListener('click', () => {
+    if (index < maxIndex()) { index++; update(true); }
+  });
+
+  // Touch / swipe
+  let touchStartX = 0;
+  track.addEventListener('touchstart', e => { touchStartX = e.touches[0].clientX; }, { passive: true });
+  track.addEventListener('touchend', e => {
+    const diff = touchStartX - e.changedTouches[0].clientX;
+    if (diff > 50 && index < maxIndex()) { index++; update(true); }
+    if (diff < -50 && index > 0)         { index--; update(true); }
+  }, { passive: true });
+
+  // Recalculate on resize (index may need clamping)
+  window.addEventListener('resize', () => {
+    index = Math.min(index, maxIndex());
+    update(false);
+  }, { passive: true });
+
+  update(false);
+})();
+
+/* ============================
+   HERO CANVAS — FLOATING LEAVES
+   Tuned for light/white background.
+   Leaves are filled + stroked in two
+   greens so they read clearly on white.
    ============================ */
 (function initHeroCanvas() {
   const canvas = document.getElementById('heroCanvas');
@@ -192,38 +273,67 @@ document.querySelectorAll(animateSelectors.join(',')).forEach((el, i) => {
   resize();
   window.addEventListener('resize', resize, { passive: true });
 
-  const PALETTE = ['#a8c8b8', '#7eaa94', '#c8d5cd', '#d4e6dc', '#b8d0c4'];
-  const COUNT   = 34;
-
   function rand(a, b) { return a + Math.random() * (b - a); }
 
+  // Each particle carries its own fill + stroke so leaves vary naturally
+  const VARIANTS = [
+    { fill: 'rgba(0,168,120,0.13)',  stroke: 'rgba(0,136,96,0.18)'  },
+    { fill: 'rgba(0,168,120,0.09)',  stroke: 'rgba(0,136,96,0.13)'  },
+    { fill: 'rgba(90,196,160,0.11)', stroke: 'rgba(0,168,120,0.15)' },
+    { fill: 'rgba(168,222,202,0.18)',stroke: 'rgba(0,168,120,0.12)' },
+    { fill: 'rgba(0,168,120,0.07)',  stroke: 'rgba(0,100,70,0.10)'  },
+  ];
+
+  const COUNT = 38;
+
   function makeParticle(randomY) {
+    const v = VARIANTS[Math.floor(rand(0, VARIANTS.length))];
     return {
-      x:          rand(0, W),
-      y:          randomY ? rand(-40, H) : rand(H + 10, H + 80),
-      vx:         rand(-0.16, 0.16),
-      vy:         -rand(0.10, 0.40),
-      size:       rand(3, 14),
-      rotation:   rand(0, Math.PI * 2),
-      rotSpeed:   rand(-0.007, 0.007),
-      alpha:      rand(0.04, 0.14),
-      wobble:     rand(0, Math.PI * 2),
-      wobbleAmp:  rand(0.08, 0.32),
-      wobbleFreq: rand(0.003, 0.010),
-      color:      PALETTE[Math.floor(rand(0, PALETTE.length))],
-      // 0 = leaf, 1 = oval, 2 = small circle
-      shape:      Math.floor(rand(0, 2.8)),
+      x:         rand(0, W),
+      y:         randomY ? rand(-40, H) : rand(H + 10, H + 100),
+      vx:        rand(-0.14, 0.14),
+      vy:        -rand(0.08, 0.36),
+      // Leaves come in two size bands: small and medium
+      size:      Math.random() < 0.6 ? rand(6, 14) : rand(14, 24),
+      rotation:  rand(0, Math.PI * 2),
+      rotSpeed:  rand(-0.006, 0.006),
+      wobble:    rand(0, Math.PI * 2),
+      wobbleAmp: rand(0.1, 0.38),
+      wobbleFreq:rand(0.003, 0.009),
+      fill:      v.fill,
+      stroke:    v.stroke,
+      // Midrib line visible on larger leaves
+      midrib:    Math.random() < 0.55,
     };
   }
 
   const particles = Array.from({ length: COUNT }, () => makeParticle(true));
 
-  function drawLeaf(s) {
+  function drawLeaf(p) {
+    const s = p.size;
     ctx.beginPath();
     ctx.moveTo(0, -s);
-    ctx.bezierCurveTo( s * 0.65, -s * 0.35,  s * 0.65, s * 0.35, 0, s);
-    ctx.bezierCurveTo(-s * 0.65,  s * 0.35, -s * 0.65, -s * 0.35, 0, -s);
+    // Right side of leaf
+    ctx.bezierCurveTo( s * 0.7, -s * 0.3,  s * 0.7,  s * 0.3, 0,  s);
+    // Left side of leaf
+    ctx.bezierCurveTo(-s * 0.7,  s * 0.3, -s * 0.7, -s * 0.3, 0, -s);
+
+    ctx.fillStyle   = p.fill;
     ctx.fill();
+
+    ctx.strokeStyle = p.stroke;
+    ctx.lineWidth   = 0.7;
+    ctx.stroke();
+
+    // Midrib (centre vein)
+    if (p.midrib && s > 9) {
+      ctx.beginPath();
+      ctx.moveTo(0, -s * 0.85);
+      ctx.lineTo(0,  s * 0.85);
+      ctx.strokeStyle = p.stroke;
+      ctx.lineWidth   = 0.5;
+      ctx.stroke();
+    }
   }
 
   function tick() {
@@ -240,26 +350,14 @@ document.querySelectorAll(animateSelectors.join(',')).forEach((el, i) => {
       ctx.save();
       ctx.translate(p.x, p.y);
       ctx.rotate(p.rotation);
-      ctx.globalAlpha = p.alpha;
-      ctx.fillStyle   = p.color;
 
-      if (p.shape === 0) {
-        drawLeaf(p.size);
-      } else if (p.shape === 1) {
-        ctx.beginPath();
-        ctx.ellipse(0, 0, p.size * 0.38, p.size * 0.92, 0, 0, Math.PI * 2);
-        ctx.fill();
-      } else {
-        ctx.beginPath();
-        ctx.arc(0, 0, p.size * 0.44, 0, Math.PI * 2);
-        ctx.fill();
-      }
+      drawLeaf(p);
 
       ctx.restore();
 
-      // Recycle when floated off the top
       if (p.y < -p.size - 20) {
         particles[i] = makeParticle(false);
+        particles[i].x = rand(0, W);
       }
     }
 
