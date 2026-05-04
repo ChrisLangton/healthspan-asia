@@ -229,33 +229,17 @@ section { padding: 96px 0; }
 .logo {
   display: flex;
   align-items: center;
-  gap: 10px;
-  color: var(--cream);
+  gap: 11px;
   flex-shrink: 0;
+  text-decoration: none;
 }
 
-.logo-mark {
-  width: 36px;
-  height: 36px;
-  background: var(--accent);
-  color: var(--white);
-  border-radius: 9px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.logo-img {
+  height: 44px;
+  width: auto;
+  display: block;
   flex-shrink: 0;
-}
-
-.logo-text {
-  font-family: 'Poppins', 'Century Gothic', sans-serif;
-  font-size: 1.05rem;
-  font-weight: 600;
-  color: var(--text-primary);
-  letter-spacing: 0.01em;
-}
-
-.logo-dot {
-  color: var(--accent);
+  max-height: 44px;
 }
 
 .nav-links {
@@ -1735,8 +1719,7 @@ section { padding: 96px 0; }
 }
 
 .footer-brand .logo { margin-bottom: 14px; }
-.footer-brand .logo .logo-text { color: rgba(255,255,255,0.9); }
-.footer-brand .logo .logo-dot  { color: var(--accent-mid); }
+.footer-brand .logo-img { border-radius: 6px; }
 
 .footer-tagline {
   font-size: 0.82rem;
