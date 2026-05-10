@@ -1,0 +1,35 @@
+{
+  "section_tag": "The Foundation",
+  "heading": "Seven Pillars That Support Everything",
+  "subtext": "Whatever your goals, these foundational habits underpin all of them. No single pillar works alone — they reinforce each other, and improving any one of them tends to lift the others.",
+  "pillars": [
+    {
+      "title": "Nutrition",
+      "body": "Whole foods, adequate protein, healthy fats, fibre, hydration, and micronutrients."
+    },
+    {
+      "title": "Sleep",
+      "body": "7–9 hours of quality sleep for hormonal balance, memory, and recovery."
+    },
+    {
+      "title": "Movement",
+      "body": "Daily movement, mobility, and time in nature."
+    },
+    {
+      "title": "Stress Management",
+      "body": "Balance challenge with recovery. Build resilience, not just endurance."
+    },
+    {
+      "title": "Mindfulness",
+      "body": "Train attention. Increase awareness, presence, and emotional balance."
+    },
+    {
+      "title": "Avoid Harm",
+      "body": "Reduce toxins, excess alcohol, smoking, chronic stress, and overexertion."
+    },
+    {
+      "title": "Regular Health Care",
+      "body": "Preventive check-ups, screenings, and early intervention when needed."
+    }
+  ]
+}

@@ -104,6 +104,23 @@ collections:
           - { label: "Chart Note", name: "chart_note", widget: "text" }
           - { label: "CTA Button Text", name: "cta_text", widget: "string" }
 
+  - name: "pillars"
+    label: "Foundational Pillars Section"
+    files:
+      - label: "Pillars Content"
+        name: "pillars"
+        file: "src/_data/pillars.json"
+        fields:
+          - { label: "Section Tag", name: "section_tag", widget: "string" }
+          - { label: "Heading", name: "heading", widget: "string" }
+          - { label: "Subtext", name: "subtext", widget: "text" }
+          - label: "Pillars"
+            name: "pillars"
+            widget: "list"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Body", name: "body", widget: "text" }
+
   - name: "what_affects"
     label: "What Shapes Your Healthspan Section"
     files:

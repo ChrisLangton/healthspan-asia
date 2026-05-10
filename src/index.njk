@@ -337,6 +337,27 @@
     </div>
   </section>
 
+  <!-- FOUNDATIONAL PILLARS -->
+  <section class="pillars" id="pillars">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">{{ pillars.section_tag }}</div>
+        <h2>{{ pillars.heading }}</h2>
+        <p class="section-sub">{{ pillars.subtext }}</p>
+      </div>
+      {% set pillar_icons = ["#i-leaf","#i-moon","#i-stretch","#i-brain","#i-sun","#i-zap","#i-stethoscope"] %}
+      <div class="pillars-row">
+        {% for pillar in pillars.pillars %}
+        <div class="pillar-card">
+          <div class="pillar-icon"><svg class="ico" aria-hidden="true"><use href="{{ pillar_icons[loop.index0] }}"/></svg></div>
+          <h3>{{ pillar.title }}</h3>
+          <p>{{ pillar.body }}</p>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
   <!-- YOUR OBJECTIVES -->
   <section class="objectives" id="objectives">
     <div class="container">

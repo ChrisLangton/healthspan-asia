@@ -131,6 +131,32 @@
     });
     CMS.registerPreviewTemplate('proof', ProofPreview);
 
+    // ── Pillars preview ───────────────────────────────────────────
+    var PillarsPreview = createClass({
+      render: function() {
+        var d = this.props.entry.get('data').toJS();
+        var items = d.pillars || [];
+        return h('section', { className: 'pillars', style: { padding: '48px 24px' } },
+          h('div', { className: 'container' },
+            h('div', { className: 'section-header' },
+              h('div', { className: 'section-tag' }, d.section_tag),
+              h('h2', {}, d.heading),
+              h('p', { className: 'section-sub' }, d.subtext)
+            ),
+            h('div', { className: 'pillars-row' },
+              items.map(function(pillar, i) {
+                return h('div', { className: 'pillar-card', key: i },
+                  h('h3', {}, pillar.title),
+                  h('p', {}, pillar.body)
+                );
+              })
+            )
+          )
+        );
+      }
+    });
+    CMS.registerPreviewTemplate('pillars', PillarsPreview);
+
     // ── Empathy preview ───────────────────────────────────────────
     var EmpathyPreview = createClass({
       render: function() {
