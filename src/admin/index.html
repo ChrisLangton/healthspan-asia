@@ -130,6 +130,298 @@
       }
     });
     CMS.registerPreviewTemplate('proof', ProofPreview);
+
+    // ── Empathy preview ───────────────────────────────────────────
+    var EmpathyPreview = createClass({
+      render: function() {
+        var d = this.props.entry.get('data').toJS();
+        var cards = d.pain_cards || [];
+        return h('section', { className: 'empathy', style: { padding: '48px 24px' } },
+          h('div', { className: 'container empathy-inner' },
+            h('div', { className: 'empathy-text' },
+              h('h2', {}, d.heading),
+              h('p', {}, d.paragraph1),
+              h('p', {}, d.paragraph2)
+            ),
+            h('div', { className: 'empathy-cards' },
+              cards.map(function(card, i) {
+                return h('div', { className: 'pain-card', key: i },
+                  h('p', {}, card)
+                );
+              })
+            )
+          )
+        );
+      }
+    });
+    CMS.registerPreviewTemplate('empathy', EmpathyPreview);
+
+    // ── Healthspan Section preview ────────────────────────────────
+    var HealthspanSectionPreview = createClass({
+      render: function() {
+        var d = this.props.entry.get('data').toJS();
+        return h('section', { className: 'what-is-healthspan', style: { padding: '48px 24px' } },
+          h('div', { className: 'container' },
+            h('div', { className: 'section-tag' }, d.section_tag),
+            h('h2', {}, d.heading),
+            h('p', { className: 'healthspan-lead' }, d.lead),
+            h('p', {}, d.paragraph1),
+            h('p', {}, d.paragraph2),
+            h('p', {}, d.paragraph3),
+            h('p', { className: 'hs-chart-note', style: { fontStyle: 'italic', marginTop: '16px' } }, d.chart_note),
+            h('a', { className: 'btn btn-secondary', style: { marginTop: '16px', display: 'inline-block' } }, d.cta_text)
+          )
+        );
+      }
+    });
+    CMS.registerPreviewTemplate('healthspan_section', HealthspanSectionPreview);
+
+    // ── What Affects preview ──────────────────────────────────────
+    var WhatAffectsPreview = createClass({
+      render: function() {
+        var d = this.props.entry.get('data').toJS();
+        var cards = d.cards || [];
+        return h('section', { className: 'what-affects', style: { padding: '48px 24px' } },
+          h('div', { className: 'container' },
+            h('div', { className: 'section-header' },
+              h('div', { className: 'section-tag' }, d.section_tag),
+              h('h2', {}, d.heading),
+              h('p', { className: 'section-sub' }, d.subtext)
+            ),
+            h('div', { className: 'affects-grid' },
+              cards.map(function(card, i) {
+                return h('div', { className: 'affect-card', key: i },
+                  h('h3', {}, card.title),
+                  h('p', {}, card.body)
+                );
+              })
+            )
+          )
+        );
+      }
+    });
+    CMS.registerPreviewTemplate('what_affects', WhatAffectsPreview);
+
+    // ── Objectives preview ────────────────────────────────────────
+    var ObjectivesPreview = createClass({
+      render: function() {
+        var d = this.props.entry.get('data').toJS();
+        var cards = d.cards || [];
+        return h('section', { className: 'objectives', style: { padding: '48px 24px' } },
+          h('div', { className: 'container' },
+            h('div', { className: 'section-header' },
+              h('div', { className: 'section-tag' }, d.section_tag),
+              h('h2', {}, d.heading),
+              h('p', { className: 'section-sub' }, d.subtext)
+            ),
+            h('div', { className: 'objectives-grid' },
+              cards.map(function(card, i) {
+                return h('button', { className: 'objective-card', key: i },
+                  h('h4', {}, card)
+                );
+              })
+            ),
+            h('p', { style: { marginTop: '24px', fontStyle: 'italic' } }, d.selected_cta),
+            h('p', { style: { marginTop: '8px' } }, d.unsure_text)
+          )
+        );
+      }
+    });
+    CMS.registerPreviewTemplate('objectives', ObjectivesPreview);
+
+    // ── Services preview ──────────────────────────────────────────
+    var ServicesPreview = createClass({
+      render: function() {
+        var d = this.props.entry.get('data').toJS();
+        var dims = d.dimensions || [];
+        var svcs = d.services || [];
+        return h('section', { className: 'services', style: { padding: '48px 24px' } },
+          h('div', { className: 'container' },
+            h('div', { className: 'section-header' },
+              h('div', { className: 'section-tag' }, d.section_tag),
+              h('h2', {}, d.heading),
+              h('p', { className: 'section-sub' }, d.subtext)
+            ),
+            h('div', { className: 'dimensions-row' },
+              dims.map(function(dim, i) {
+                return h('div', { className: 'dimension-card', key: i },
+                  h('h3', {}, dim.title),
+                  h('p', {}, dim.body)
+                );
+              })
+            ),
+            h('div', { className: 'services-divider' }, h('span', {}, d.divider_text)),
+            h('div', { className: 'services-grid-track', style: { display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '16px', marginTop: '24px' } },
+              svcs.map(function(svc, i) {
+                return h('div', { className: 'service-card', key: i },
+                  h('h3', {}, svc.title),
+                  h('p', {}, svc.body)
+                );
+              })
+            )
+          )
+        );
+      }
+    });
+    CMS.registerPreviewTemplate('services', ServicesPreview);
+
+    // ── How We Work preview ───────────────────────────────────────
+    var HowWeWorkPreview = createClass({
+      render: function() {
+        var d = this.props.entry.get('data').toJS();
+        var steps = d.steps || [];
+        return h('section', { className: 'how-we-work', style: { padding: '48px 24px' } },
+          h('div', { className: 'container' },
+            h('div', { className: 'section-header' },
+              h('div', { className: 'section-tag' }, d.section_tag),
+              h('h2', {}, d.heading),
+              h('p', { className: 'section-sub' }, d.subtext)
+            ),
+            h('div', { className: 'how-grid' },
+              steps.map(function(step, i) {
+                return h('div', { className: 'how-card', key: i },
+                  h('div', { className: 'how-num' }, step.num),
+                  h('h3', {}, step.title),
+                  h('p', {}, step.body)
+                );
+              }),
+              h('div', { className: 'how-card how-card-quote' },
+                h('div', { className: 'how-quote-mark' }, '"'),
+                h('p', { className: 'how-quote-text' }, d.quote),
+                h('span', { className: 'how-quote-attr' }, d.quote_attr)
+              )
+            )
+          )
+        );
+      }
+    });
+    CMS.registerPreviewTemplate('how_we_work', HowWeWorkPreview);
+
+    // ── Personalisation preview ───────────────────────────────────
+    var PersonalisationPreview = createClass({
+      render: function() {
+        var d = this.props.entry.get('data').toJS();
+        var cards = d.cards || [];
+        return h('section', { className: 'personalisation', style: { padding: '48px 24px' } },
+          h('div', { className: 'container' },
+            h('div', { className: 'section-header' },
+              h('div', { className: 'section-tag' }, d.section_tag),
+              h('h2', {}, d.heading),
+              h('p', { className: 'section-sub' }, d.subtext)
+            ),
+            h('div', { className: 'personal-cards' },
+              cards.map(function(card, i) {
+                return h('div', { className: 'personal-card' + (i === 1 ? ' personal-card-featured' : ''), key: i },
+                  h('h3', {}, card.title),
+                  h('p', {}, card.paragraph1),
+                  h('p', {}, card.paragraph2),
+                  h('ul', { className: 'personal-list' },
+                    (card.list_items || []).map(function(item, j) {
+                      return h('li', { key: j }, item);
+                    })
+                  )
+                );
+              })
+            )
+          )
+        );
+      }
+    });
+    CMS.registerPreviewTemplate('personalisation', PersonalisationPreview);
+
+    // ── About preview ─────────────────────────────────────────────
+    var AboutPreview = createClass({
+      render: function() {
+        var d = this.props.entry.get('data').toJS();
+        var values = d.values || [];
+        return h('section', { className: 'about', style: { padding: '48px 24px' } },
+          h('div', { className: 'container about-inner' },
+            h('div', { className: 'about-text' },
+              h('div', { className: 'section-tag' }, d.section_tag),
+              h('h2', {}, d.heading),
+              h('p', {}, d.paragraph1),
+              h('p', {}, d.paragraph2),
+              h('p', {}, d.paragraph3),
+              h('div', { className: 'about-values' },
+                values.map(function(val, i) {
+                  return h('div', { className: 'value-item', key: i },
+                    h('span', { className: 'value-check' }, '✓'),
+                    ' ' + val
+                  );
+                })
+              ),
+              h('div', { className: 'about-stat-card', style: { marginTop: '24px' } },
+                h('span', { className: 'about-stat-num' }, d.stat_num),
+                h('span', { className: 'about-stat-label' }, d.stat_label)
+              ),
+              h('a', { className: 'btn btn-primary', style: { marginTop: '24px', display: 'inline-block' } }, d.cta_text)
+            )
+          )
+        );
+      }
+    });
+    CMS.registerPreviewTemplate('about', AboutPreview);
+
+    // ── Glossary preview ──────────────────────────────────────────
+    var GlossaryPreview = createClass({
+      render: function() {
+        var d = this.props.entry.get('data').toJS();
+        var items = d.items || [];
+        return h('section', { className: 'glossary', style: { padding: '48px 24px' } },
+          h('div', { className: 'container' },
+            h('div', { className: 'section-header' },
+              h('div', { className: 'section-tag' }, d.section_tag),
+              h('h2', {}, d.heading),
+              h('p', { className: 'section-sub' }, d.subtext)
+            ),
+            h('p', { style: { fontStyle: 'italic', marginBottom: '24px' } }, d.note),
+            h('div', { className: 'glossary-list' },
+              items.map(function(item, i) {
+                return h('div', { className: 'glossary-item', key: i },
+                  h('button', { className: 'glossary-term' },
+                    item.term,
+                    h('span', { className: 'glossary-arrow' }, '▼')
+                  ),
+                  h('div', { className: 'glossary-def open' },
+                    h('p', {}, item.definition)
+                  )
+                );
+              })
+            )
+          )
+        );
+      }
+    });
+    CMS.registerPreviewTemplate('glossary', GlossaryPreview);
+
+    // ── CTA preview ───────────────────────────────────────────────
+    var CtaPreview = createClass({
+      render: function() {
+        var d = this.props.entry.get('data').toJS();
+        var opts = d.form_options || [];
+        return h('section', { className: 'cta-section', style: { padding: '64px 24px' } },
+          h('div', { className: 'container cta-inner' },
+            h('div', { className: 'cta-badge' }, d.badge),
+            h('h2', {}, d.heading),
+            h('p', {}, d.subtext),
+            h('div', { style: { marginTop: '24px', background: 'rgba(255,255,255,0.1)', padding: '24px', borderRadius: '8px' } },
+              h('p', { style: { fontWeight: 600 } }, 'Form dropdown options:'),
+              h('ul', { style: { marginTop: '8px', paddingLeft: '20px' } },
+                opts.map(function(opt, i) {
+                  return h('li', { key: i }, opt);
+                })
+              )
+            ),
+            h('button', { className: 'btn btn-primary btn-lg', style: { marginTop: '24px', display: 'block' } }, d.button_text),
+            h('p', { style: { marginTop: '12px', opacity: 0.7, fontSize: '13px' } }, d.disclaimer),
+            h('hr', { style: { margin: '32px 0', opacity: 0.3 } }),
+            h('h3', {}, d.success_heading),
+            h('p', {}, d.success_body)
+          )
+        );
+      }
+    });
+    CMS.registerPreviewTemplate('cta', CtaPreview);
   </script>
 </body>
 </html>
