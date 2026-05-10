@@ -1,0 +1,17 @@
+{
+  "badge": "A gentle first step. No pressure.",
+  "heading": "A Conversation Is a Good Place to Start",
+  "subtext": "Book a free, unhurried 30-minute conversation with one of our health concierges. We'll listen carefully to where you are, what you're hoping for, and tell you honestly whether we think we can help. No pitch. No hard sell.",
+  "button_text": "Book My Free Conversation →",
+  "disclaimer": "No spam, ever. Your details are safe with us. We'll be in touch within 24 hours.",
+  "success_heading": "Thank you. We'll be in touch soon.",
+  "success_body": "One of our health concierges will reach out within 24 hours to arrange your free conversation. We're looking forward to hearing about you.",
+  "form_options": [
+    "I want more energy and vitality",
+    "I'd like to lose weight and improve my fitness",
+    "I have pain or injury I need help with",
+    "I want to understand my health markers",
+    "I want to sleep better",
+    "I'm not sure. I just know something needs to change"
+  ]
+}

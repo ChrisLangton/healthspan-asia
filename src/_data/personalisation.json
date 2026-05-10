@@ -1,0 +1,43 @@
+{
+  "section_tag": "Tailored to You",
+  "heading": "No Two People Are the Same. Neither Are Their Plans.",
+  "subtext": "Generic health advice produces generic results. Everything we do is personalised to your biology, your life, and what matters to you.",
+  "cards": [
+    {
+      "title": "The Science Part",
+      "paragraph1": "We start with data. Comprehensive biomarker testing, covering bloodwork, hormonal panels, metabolic markers, cardiovascular risk and inflammatory load, gives us an objective picture of what's happening inside your body.",
+      "paragraph2": "Over time, we track how these numbers move in response to changes in your lifestyle, training, and nutrition. This turns guesswork into evidence, and progress into something you can see.",
+      "list_items": [
+        "Full bloodwork and hormonal panel",
+        "Body composition and metabolic rate",
+        "HRV and sleep quality measurement",
+        "Biological age assessment",
+        "Quarterly retesting to track progress"
+      ]
+    },
+    {
+      "title": "The Art Part",
+      "paragraph1": "Data tells us a lot, but it doesn't tell us everything. The art of what we do is the human part: listening carefully, reading between the lines, understanding what motivates you, what holds you back, and what kind of support actually helps you change.",
+      "paragraph2": "Your health concierge gets to know you over time. They notice patterns. They ask the questions that open things up. They know when to push and when to be gentle. No algorithm does this.",
+      "list_items": [
+        "Deep listening and human understanding",
+        "Motivational style and pacing matched to you",
+        "Cultural and lifestyle sensitivity",
+        "Honest, kind feedback when it's needed",
+        "A safe space to be frank about what's hard"
+      ]
+    },
+    {
+      "title": "Tracking Progress & Adjusting",
+      "paragraph1": "We review your progress regularly, looking not just at the numbers but at how you feel, what's changed, and what hasn't. Where things aren't working, we adjust. Where they are, we build on them.",
+      "paragraph2": "Nothing about your plan is set in stone. Life changes. Your body changes. Your goals may evolve. We stay curious and responsive throughout.",
+      "list_items": [
+        "Monthly check-ins with your concierge",
+        "Quarterly biomarker retesting",
+        "Plan adjustments based on real progress",
+        "Subjective wellbeing tracked alongside data",
+        "Long-term health trajectory review"
+      ]
+    }
+  ]
+}

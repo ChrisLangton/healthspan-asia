@@ -1,0 +1,17 @@
+{
+  "section_tag": "The Factors at Play",
+  "heading": "What Shapes Your Healthspan?",
+  "subtext": "Your healthspan isn't fixed. It's shaped by a complex web of factors, some inherited and most influenced by how you live. Understanding them is the first step to changing them.",
+  "cards": [
+    { "title": "Genotype vs Phenotype", "body": "Your genes are your starting point, not your destiny. Genotype is what you're born with. Phenotype is how those genes express themselves based on your environment and choices. We can't change your DNA, but we can change almost everything else." },
+    { "title": "Age", "body": "Biological ageing is real and measurable, but it's not a straight line. The rate at which you age is highly variable, and the right interventions at the right time can slow it meaningfully. Many of our members find their biological age is younger than their chronological age after working with us." },
+    { "title": "Sex", "body": "Men and women age differently, each with their own hormonal shifts, cardiovascular risk patterns, and bone density changes that require specific, tailored attention. Our work accounts for your biology as it actually is." },
+    { "title": "Oxidation & Metabolic Rate", "body": "Oxidative stress, the wear and tear of living, is one of the primary drivers of ageing at a cellular level. How efficiently your body produces and uses energy, and how well it manages oxidative damage, matters enormously for how you feel and function." },
+    { "title": "Sleep", "body": "Sleep is not downtime. It's when your body does its most important repair work. Poor sleep accelerates almost every aspect of biological ageing, from cognitive decline to metabolic dysfunction. It's one of the most powerful levers we have." },
+    { "title": "Nutrition", "body": "What you eat, and how and when you eat it, shapes your cellular environment every single day. There's no universal diet, but there are principles grounded in good science that we tailor precisely to your biology and your life." },
+    { "title": "Exercise & Activity", "body": "Movement is medicine, and the evidence is overwhelming. The right kinds of exercise, calibrated to where you are and where you want to go, can extend both lifespan and healthspan more than almost any other intervention we know of." },
+    { "title": "State of Mind", "body": "How you feel emotionally has direct, measurable effects on your physical health: your immune function, hormonal balance, cardiovascular health, and rate of ageing. Wellbeing isn't a soft concept; it's a biological reality." },
+    { "title": "Lifestyle", "body": "The accumulation of daily habits, from how you manage stress to the relationships you maintain and the environments you inhabit, collectively shapes your healthspan perhaps more than any single factor." },
+    { "title": "Your Medical History", "body": "Existing conditions, past injuries, medications, and family health history all play a role. We work alongside your doctors, not around them, to ensure your health plan accounts for the full picture of who you are medically." }
+  ]
+}

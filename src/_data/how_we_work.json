@@ -1,0 +1,14 @@
+{
+  "section_tag": "How We Work Together",
+  "heading": "A Relationship, Not a Programme",
+  "subtext": "We don't hand you a plan and leave you to it. We walk alongside you, adjusting and responding to what your body and life actually need.",
+  "steps": [
+    { "num": "01", "title": "A Conversation, Not a Consultation", "body": "We start with a genuine conversation, unhurried, open, and curious. We want to understand not just your health history, but your life: your work, your relationships, your fears, your hopes. This is where we get to know you as a whole person." },
+    { "num": "02", "title": "Building Your Health Picture", "body": "Comprehensive bloodwork, body composition, movement assessment, sleep quality, and lifestyle audit. We gather the data we need to understand where you actually are, not where you assume you are." },
+    { "num": "03", "title": "Your Personal Health Blueprint", "body": "Based on everything we've learned, we put together a clear, integrated plan. Not a collection of separate recommendations from separate providers. One coherent plan, held together by your dedicated concierge." },
+    { "num": "04", "title": "Bringing in the Right Specialists", "body": "Depending on what you need, we bring in specialists from our network: physiotherapists, doctors, psychologists, sleep experts. We brief them fully, coordinate their work, and ensure they're all pulling in the same direction." },
+    { "num": "05", "title": "An Ongoing, Evolving Partnership", "body": "Health isn't a destination. It's a practice. We review your progress regularly, re-test your biomarkers quarterly, and adapt your plan as your life changes. Your concierge is always available when you need them." }
+  ],
+  "quote": "The goal isn't to fix you. You're not broken. It's to help you become the healthiest, most vital version of yourself. That looks different for everyone, and we never forget it.",
+  "quote_attr": "Healthspan Concierge philosophy"
+}
