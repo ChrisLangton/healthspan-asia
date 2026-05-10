@@ -1,16 +1,16 @@
 {
   "section_tag": "About & Mission",
-  "heading": "We Exist Because People Deserve Better After 50",
-  "paragraph1": "We bring together the latest, most vital Healthspan knowledge and tailor it to your individual needs: your biology, your medical history, and your lifestyle. Then we combine that into practical programmes and connect you to the support you need to implement them.",
-  "paragraph2": "That's how we partner with you to maximise your Healthspan, so you can Live Better. For Longer.",
-  "paragraph3": "Most people over 50 are falling through a gap between \"not sick enough to see a doctor\" and \"genuinely thriving.\" We were created to close that gap by bringing together the right people, the right knowledge, and the right kind of care, in a way that fits the reality of a full, busy life.",
   "values": [
     "Evidence-based, not trend-based",
     "Whole-person, not symptom-focused",
     "Proactive, not reactive",
     "Built exclusively for adults 50+"
   ],
-  "stat_num": "50+",
-  "stat_label": "Average age of our members when they start",
+  "heading": "We Exist Because People Deserve Better After 50",
+  "paragraph1": "We bring together the latest, most vital Healthspan knowledge and tailor it to your individual needs: your biology, your medical history, and your lifestyle. Then we combine that into practical programmes and connect you to the support you need to implement them.",
+  "paragraph2": "That's how we partner with you to maximise your Healthspan, so you can Live Better. For Longer.",
+  "paragraph3": "Most people over 50 are falling through a gap between \"not sick enough to see a doctor\" and \"genuinely thriving.\" We were created to close that gap by bringing together the right people, the right knowledge, and the right kind of care, in a way that fits the reality of a full, busy life.",
+  "stat_label": "Age range of our clients",
+  "stat_num": "50-78",
   "cta_text": "Begin Your Journey"
 }
