@@ -503,7 +503,7 @@
         <div class="section-tag">{{ about.section_tag }}</div>
         <h2>{{ about.heading }}</h2>
         <p>{{ about.paragraph1 }}</p>
-        <p>{{ about.paragraph2 }}</p>
+        <p>{{ about.paragraph2 | safe }}</p>
         <p>{{ about.paragraph3 }}</p>
         <div class="about-values">
           {% for value in about.values %}
