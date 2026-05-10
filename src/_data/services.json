@@ -4,18 +4,51 @@
   "subtext": "Good health isn't just physical. We work with all of who you are: body, mind, and spirit, because all three are connected, and all three matter for how well you live.",
   "divider_text": "The specific services we provide",
   "dimensions": [
-    { "title": "Physical", "body": "How your body moves, functions, and recovers. Strength, fitness, weight, pain, sleep, nutrition, hormones: the tangible, measurable foundation of your health." },
-    { "title": "Mental & Emotional", "body": "How you think, feel, and respond to the world. Cognitive sharpness, stress management, emotional resilience, and the relationship between your inner life and your physical health." },
-    { "title": "Spiritual", "body": "Meaning, purpose, and connection. Not religious unless you want it to be, but the deeper sense of what makes life feel worthwhile, and why that belongs in a health conversation." }
+    {
+      "title": "Physical",
+      "body": "How your body moves, functions, and recovers. Strength, fitness, weight, pain, sleep, nutrition, hormones: the tangible, measurable foundation of your health."
+    },
+    {
+      "title": "Mental & Emotional",
+      "body": "How you think, feel, and respond to the world. Cognitive sharpness, stress management, emotional resilience, and the relationship between your inner life and your physical health."
+    },
+    {
+      "title": "Spiritual",
+      "body": "Meaning, purpose, and connection. Not religious unless you want it to be, but the deeper sense of what makes life feel worthwhile, and why that belongs in a health conversation."
+    }
   ],
   "services": [
-    { "title": "Strength, Conditioning & Cardio", "body": "Training built specifically for the 50+ body, not adapted from something designed for 30-year-olds. We build strength, protect your joints, improve your cardiovascular health, and keep you moving well for years to come." },
-    { "title": "Nutritional Advice & Support", "body": "Evidence-based guidance tailored to your bloodwork, goals, and the reality of your life. No extreme diets. No one-size-fits-all rules. Just the food habits that actually work for your biology." },
-    { "title": "Sleep Advice & Support", "body": "Sleep is the foundation everything else rests on. We assess what's getting in the way, and build practical, sustainable changes to help you sleep more deeply and wake up restored." },
-    { "title": "Mobility & Flexibility", "body": "Moving freely, without pain, stiffness, or limitation, is one of the great quiet joys of a healthy body. We work on mobility and flexibility as a core part of your programme, not an afterthought." },
-    { "title": "Sexuality Advice & Support", "body": "An often-ignored part of health after 50, and one that matters enormously for quality of life. We create a safe, private space to talk honestly about sexual health, libido, intimacy, and what can help." },
-    { "title": "State of Mind & Its Management", "body": "Stress, anxiety, low mood, and the mental weight of a busy life all have real physical consequences. We explore what's contributing, and what changes in thinking, habit, and lifestyle might meaningfully shift things." },
-    { "title": "Physiotherapy & Injury Care", "body": "Rehabilitation, chronic pain management, and postural correction from specialists who understand the ageing body. We treat what's hurting now and prevent what might hurt next." },
-    { "title": "Medical Coordination", "body": "Access to our vetted network of doctors and specialists, with a concierge who briefs them, follows up on results, and makes sure nothing falls through the cracks of a fragmented healthcare system." }
+    {
+      "title": "Strength, Conditioning & Cardio",
+      "body": "Training built specifically for the 50+ body, not adapted from something designed for 30-year-olds. We build strength, protect your joints, improve your cardiovascular health, and keep you moving well for years to come. Your safety is our top priority."
+    },
+    {
+      "title": "Nutritional Advice & Support",
+      "body": "Evidence-based guidance tailored to your bloodwork, goals, and the reality of your life. No extreme diets. No one-size-fits-all rules. Just the food habits that actually work for your biology."
+    },
+    {
+      "title": "Sleep Advice & Support",
+      "body": "Sleep is the foundation everything else rests on. We assess what's getting in the way, and build practical, sustainable changes to help you sleep more deeply and wake up restored."
+    },
+    {
+      "title": "Mobility & Flexibility",
+      "body": "Moving freely, without pain, stiffness, or limitation, is one of the great quiet joys of a healthy body. We work on mobility and flexibility as a core part of your programme, not an afterthought."
+    },
+    {
+      "title": "Sexuality Advice & Support",
+      "body": "An often-ignored part of health after 50, and one that matters enormously for quality of life. We create a safe, private space to talk honestly about sexual health, libido, intimacy, and what can help."
+    },
+    {
+      "title": "State of Mind & Its Management",
+      "body": "Stress, anxiety, low mood, and the mental weight of a busy life all have real physical consequences. We explore what's contributing, and what changes in thinking, habit, and lifestyle might meaningfully shift things."
+    },
+    {
+      "title": "Physiotherapy & Injury Care",
+      "body": "Rehabilitation, chronic pain management, and postural correction from specialists who understand the ageing body. We treat what's hurting now and prevent what might hurt next."
+    },
+    {
+      "title": "Medical Coordination",
+      "body": "Access to our vetted network of doctors and specialists, with a concierge who briefs them, follows up on results, and makes sure nothing falls through the cracks of a fragmented healthcare system."
+    }
   ]
 }
