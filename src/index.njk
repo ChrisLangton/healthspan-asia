@@ -1,0 +1,986 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Healthspan.Asia | Longevity Concierge for Adults 50+</title>
+  <meta name="description" content="Healthspan.Asia is Asia's longevity concierge for adults over 50. Personal coaching, nutrition, physiotherapy, doctor referrals, and whole-person health support, quietly coordinated and deeply personalised." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+</head>
+<body>
+
+<!-- ===== SVG ICON SPRITE ===== -->
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true">
+
+  <!-- Leaf / nature / nutrition / lifestyle -->
+  <symbol id="i-leaf" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10z"/>
+    <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/>
+  </symbol>
+
+  <!-- Sprout / growth / mission -->
+  <symbol id="i-sprout" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M12 22V12"/>
+    <path d="M12 12C12 12 7 8.5 7 5.5A5 5 0 0 1 17 5.5C17 8.5 12 12 12 12z"/>
+    <path d="M12 12c-2-2-5-2-7-.5"/>
+  </symbol>
+
+  <!-- Zap / energy / lightning -->
+  <symbol id="i-zap" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+  </symbol>
+
+  <!-- Moon / sleep -->
+  <symbol id="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+  </symbol>
+
+  <!-- Target / body composition / weight goal -->
+  <symbol id="i-target" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="12" cy="12" r="10"/>
+    <circle cx="12" cy="12" r="6"/>
+    <circle cx="12" cy="12" r="2"/>
+  </symbol>
+
+  <!-- Plus in circle / injury / medical -->
+  <symbol id="i-plus-circle" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="12" cy="12" r="10"/>
+    <line x1="12" y1="8" x2="12" y2="16"/>
+    <line x1="8" y1="12" x2="16" y2="12"/>
+  </symbol>
+
+  <!-- DNA / genetics -->
+  <symbol id="i-dna" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M2 6c4-4 8 4 12 0s6-4 8 0"/>
+    <path d="M2 12c4-4 8 4 12 0s6-4 8 0"/>
+    <path d="M2 18c4-4 8 4 12 0s6-4 8 0"/>
+    <line x1="2" y1="6" x2="2" y2="18"/>
+    <line x1="22" y1="6" x2="22" y2="18"/>
+  </symbol>
+
+  <!-- Hourglass / age -->
+  <symbol id="i-hourglass" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M5 3h14"/>
+    <path d="M5 21h14"/>
+    <path d="M5 3l7 9 7-9"/>
+    <path d="M5 21l7-9 7 9"/>
+  </symbol>
+
+  <!-- Person / sex / body -->
+  <symbol id="i-person" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="12" cy="7" r="4"/>
+    <path d="M5.5 22v-2a6.5 6.5 0 0 1 13 0v2"/>
+  </symbol>
+
+  <!-- Flame / oxidation / metabolism -->
+  <symbol id="i-flame" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M12 2c0 5-5 7-5 12a5 5 0 0 0 10 0C17 9 12 7 12 2z"/>
+    <path d="M12 8c0 3-2 4.5-2 6.5a2 2 0 0 0 4 0C14 12.5 12 11 12 8z"/>
+  </symbol>
+
+  <!-- Activity / exercise / EKG wave -->
+  <symbol id="i-activity" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+  </symbol>
+
+  <!-- Brain / mind / mental health -->
+  <symbol id="i-brain" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96-.44 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 1.98-3A2.5 2.5 0 0 1 9.5 2z"/>
+    <path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96-.44 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0 .34-5.58 2.5 2.5 0 0 0-1.32-4.24 2.5 2.5 0 0 0-1.98-3A2.5 2.5 0 0 0 14.5 2z"/>
+  </symbol>
+
+  <!-- Sun / lifestyle / spiritual -->
+  <symbol id="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="12" cy="12" r="4"/>
+    <line x1="12" y1="2" x2="12" y2="5"/>
+    <line x1="12" y1="19" x2="12" y2="22"/>
+    <line x1="4.93" y1="4.93" x2="7.05" y2="7.05"/>
+    <line x1="16.95" y1="16.95" x2="19.07" y2="19.07"/>
+    <line x1="2" y1="12" x2="5" y2="12"/>
+    <line x1="19" y1="12" x2="22" y2="12"/>
+    <line x1="4.93" y1="19.07" x2="7.05" y2="16.95"/>
+    <line x1="16.95" y1="7.05" x2="19.07" y2="4.93"/>
+  </symbol>
+
+  <!-- Stethoscope / medical coordination -->
+  <symbol id="i-stethoscope" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="17" cy="18" r="3"/>
+    <path d="M17 15v-2a5 5 0 0 0-10 0v4a4 4 0 0 0 4 4h3"/>
+    <line x1="14" y1="18" x2="17" y2="18"/>
+  </symbol>
+
+  <!-- Dumbbell / strength -->
+  <symbol id="i-dumbbell" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="2" y="10" width="4" height="5" rx="1"/>
+    <rect x="18" y="10" width="4" height="5" rx="1"/>
+    <line x1="6" y1="12.5" x2="18" y2="12.5"/>
+    <line x1="2" y1="11.5" x2="2" y2="13.5" stroke-width="2.5"/>
+    <line x1="22" y1="11.5" x2="22" y2="13.5" stroke-width="2.5"/>
+  </symbol>
+
+  <!-- Person stretching / mobility -->
+  <symbol id="i-stretch" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="12" cy="4" r="2"/>
+    <line x1="12" y1="6" x2="12" y2="16"/>
+    <line x1="5" y1="9" x2="19" y2="9"/>
+    <path d="M8 20l4-4 4 4"/>
+  </symbol>
+
+  <!-- Heart / sexuality / love -->
+  <symbol id="i-heart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+  </symbol>
+
+  <!-- Flask / science -->
+  <symbol id="i-flask" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M9 3h6M9 3v5.5L5 15c-1 2-.2 4.5 2 5.5 1 .5 2 .5 5 .5s4 0 5-.5c2.2-1 3-3.5 2-5.5L15 8.5V3"/>
+    <circle cx="11" cy="16" r="1" fill="currentColor" stroke="none"/>
+    <circle cx="14" cy="14" r="0.8" fill="currentColor" stroke="none"/>
+  </symbol>
+
+  <!-- Pencil / art -->
+  <symbol id="i-pencil" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"/>
+  </symbol>
+
+  <!-- Trending up / progress -->
+  <symbol id="i-trending" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/>
+    <polyline points="17 6 23 6 23 12"/>
+  </symbol>
+
+  <!-- Book open / glossary -->
+  <symbol id="i-book" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/>
+    <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
+  </symbol>
+
+  <!-- Bar chart / biomarkers -->
+  <symbol id="i-bar-chart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <line x1="18" y1="20" x2="18" y2="10"/>
+    <line x1="12" y1="20" x2="12" y2="4"/>
+    <line x1="6" y1="20" x2="6" y2="14"/>
+    <line x1="2" y1="20" x2="22" y2="20"/>
+  </symbol>
+
+</svg>
+<!-- ===== END ICON SPRITE ===== -->
+
+  <!-- NAV -->
+  <header class="nav-wrap" id="nav">
+    <div class="container nav-inner">
+      <a href="#" class="logo">
+        <img src="logo.png?v=2" alt="Healthspan Concierge — Live Better. For Longer." class="logo-img" style="height:48px!important;max-height:48px!important;width:auto!important;margin-left:36px;" />
+      </a>
+      <nav class="nav-links">
+        <a href="#what-is-healthspan">What is Healthspan?</a>
+        <a href="#services">Our Approach</a>
+        <a href="#how-we-work">How We Work</a>
+        <a href="#about">About</a>
+        <a href="#testimonials">Stories</a>
+      </nav>
+      <a href="#consult" class="btn btn-nav">Begin Your Journey</a>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#what-is-healthspan" onclick="closeMobile()">What is Healthspan?</a>
+      <a href="#services" onclick="closeMobile()">Our Approach</a>
+      <a href="#how-we-work" onclick="closeMobile()">How We Work</a>
+      <a href="#about" onclick="closeMobile()">About</a>
+      <a href="#testimonials" onclick="closeMobile()">Stories</a>
+      <a href="#consult" class="btn btn-primary" onclick="closeMobile()">Begin Your Journey</a>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <canvas id="heroCanvas" aria-hidden="true"></canvas>
+    <div class="hero-bg"></div>
+    <div class="hero-organic-shape"></div>
+    <div class="container hero-inner">
+      <div class="hero-badge">{{ hero.badge }}</div>
+      <h1 class="hero-headline">Live Better<span class="hero-dot">.</span><br />For Longer<span class="hero-dot">.</span></h1>
+      <p class="hero-sub">We work with you and our specialist partners to maximise your Healthspan by bringing together the right knowledge, the right people, and the right support so you can live more fully, for more years.</p>
+      <div class="hero-cta-group">
+        <a href="#consult" class="btn btn-primary btn-lg">Begin Your Journey</a>
+        <a href="#what-is-healthspan" class="btn btn-ghost btn-lg">What is Healthspan?</a>
+      </div>
+      <div class="hero-trust">
+        <div class="trust-item"><span class="trust-num">{{ hero.stat1_num }}</span><span class="trust-label">{{ hero.stat1_label }}</span></div>
+        <div class="trust-divider"></div>
+        <div class="trust-item"><span class="trust-num">{{ hero.stat2_num }}</span><span class="trust-label">{{ hero.stat2_label }}</span></div>
+        <div class="trust-divider"></div>
+        <div class="trust-item"><span class="trust-num">{{ hero.stat3_num }}</span><span class="trust-label">{{ hero.stat3_label }}</span></div>
+      </div>
+    </div>
+    <div class="hero-scroll-hint">
+      <span>Scroll to explore</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- PROBLEM / EMPATHY -->
+  <section class="empathy">
+    <div class="container empathy-inner">
+      <div class="empathy-text">
+        <h2>After 50, the old ways stop working as well as they used to.</h2>
+        <p>You've spent decades building a career, a family, a life. But somewhere along the way, the energy dipped, the weight crept up, the joints started complaining. And the generic advice online? It's written for someone else entirely.</p>
+        <p>You don't need more information. You need the right support: people who understand the biology of ageing, the reality of a full life, and what it genuinely takes to feel well past 50.</p>
+      </div>
+      <div class="empathy-cards">
+        <div class="pain-card">
+          <div class="pain-icon"><svg class="ico" aria-hidden="true"><use href="#i-zap"/></svg></div>
+          <p>Energy and vitality that aren't what they used to be</p>
+        </div>
+        <div class="pain-card">
+          <div class="pain-icon"><svg class="ico" aria-hidden="true"><use href="#i-target"/></svg></div>
+          <p>Weight that won't shift despite your best efforts</p>
+        </div>
+        <div class="pain-card">
+          <div class="pain-icon"><svg class="ico" aria-hidden="true"><use href="#i-plus-circle"/></svg></div>
+          <p>Pain or injury that keeps getting in the way</p>
+        </div>
+        <div class="pain-card">
+          <div class="pain-icon"><svg class="ico" aria-hidden="true"><use href="#i-moon"/></svg></div>
+          <p>Poor sleep, brain fog, or a sense that something's off</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT IS HEALTHSPAN -->
+  <section class="what-is-healthspan" id="what-is-healthspan">
+    <div class="nature-divider nature-divider-top"></div>
+    <div class="container">
+      <div class="healthspan-split">
+        <div class="healthspan-visual">
+          <div class="hs-linechart">
+            <svg viewBox="0 0 660 400" xmlns="http://www.w3.org/2000/svg" class="hs-svg" role="img" aria-label="Chart: Successful Ageing — Healthspan versus Lifespan, adapted from Peter Attia's Outlive">
+
+              <defs>
+                <marker id="arrowBlack" markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto">
+                  <path d="M0,0 L0,6 L8,3 z" fill="#111"/>
+                </marker>
+                <marker id="arrowGreen" markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto">
+                  <path d="M0,0 L0,6 L8,3 z" fill="#00a878"/>
+                </marker>
+              </defs>
+
+              <!-- Title -->
+              <text x="330" y="26" text-anchor="middle" fill="#111" font-size="14" font-family="Poppins, sans-serif" font-weight="700">Successful Ageing — Healthspan versus Lifespan</text>
+
+              <!-- Y-axis -->
+              <line x1="90" y1="318" x2="90" y2="48" stroke="#111" stroke-width="2.5" stroke-linecap="round"/>
+              <polygon points="90,42 85,55 95,55" fill="#111"/>
+
+              <!-- X-axis -->
+              <line x1="90" y1="318" x2="628" y2="318" stroke="#111" stroke-width="2.5" stroke-linecap="round"/>
+              <polygon points="634,318 621,313 621,323" fill="#111"/>
+
+              <!-- Y-axis label -->
+              <text x="28" y="185" text-anchor="middle" fill="#111" font-size="14" font-family="Poppins, sans-serif" font-weight="700" transform="rotate(-90 28 185)">Health</text>
+
+              <!-- X-axis label -->
+              <text x="355" y="352" text-anchor="middle" fill="#111" font-size="14" font-family="Poppins, sans-serif" font-weight="700">Years of life</text>
+
+              <!-- BLACK curve: starts at same point as green, immediately declines — single cubic, no inflection -->
+              <path d="M 100,87 C 290,87 513,210 513,316"
+                    fill="none" stroke="#111" stroke-width="3" stroke-linecap="round"/>
+
+              <!-- GREEN curve: starts at same point, flat then quadratic cliff — no inflection guaranteed -->
+              <path d="M 100,87 L 470,87 Q 608,87 608,316"
+                    fill="none" stroke="#00a878" stroke-width="3" stroke-linecap="round"/>
+
+              <!-- "Lifespan Ageing →" label — same y as Healthspan label -->
+              <text x="258" y="205" fill="#111" font-size="12.5" font-family="Poppins, sans-serif" font-weight="600">Lifespan</text>
+              <text x="258" y="221" fill="#111" font-size="12.5" font-family="Poppins, sans-serif" font-weight="600">Ageing</text>
+              <line x1="318" y1="213" x2="352" y2="185" stroke="#111" stroke-width="1.8" marker-end="url(#arrowBlack)"/>
+
+              <!-- "Healthspan Ageing →" label — same y as Lifespan, same arrow offset/delta as black -->
+              <text x="475" y="205" fill="#00a878" font-size="12.5" font-family="Poppins, sans-serif" font-weight="600">Healthspan</text>
+              <text x="475" y="221" fill="#00a878" font-size="12.5" font-family="Poppins, sans-serif" font-weight="600">Ageing</text>
+              <line x1="550" y1="213" x2="584" y2="185" stroke="#00a878" stroke-width="1.8" marker-end="url(#arrowGreen)"/>
+
+              <!-- Attribution -->
+              <text x="330" y="387" text-anchor="middle" fill="#555" font-size="11" font-family="Inter, sans-serif">
+                <tspan font-weight="700">Adapted from Attia, Peter. MD, (2023) </tspan><tspan font-style="italic" font-weight="700">Outlive The Science &amp; Art Of Longevity,</tspan><tspan font-weight="700"> Harmony</tspan>
+              </text>
+
+            </svg>
+            <p class="hs-chart-note">The green curve shows "compression of morbidity" — staying at full health longer, then a sharper, shorter decline. That's the goal: not just a longer life, but more years lived well.</p>
+          </div>
+        </div>
+        <div class="healthspan-text">
+          <div class="section-tag">Understanding the Basics</div>
+          <h2>What is Healthspan?</h2>
+          <p class="healthspan-lead">Most of us know the word <em>lifespan</em>, meaning how long we live. But there's another number that matters just as much, and most people have never heard of it.</p>
+          <p><strong>Healthspan</strong> is how many of those years you spend in genuinely good health: with the energy, physical capability, mental sharpness, and emotional wellbeing to fully enjoy your life.</p>
+          <p>The average person today spends 10 to 15 years of their life in a state of meaningful decline before they die. The question we ask isn't just "how long will you live?" but "how <em>well</em> will you live, and for how long?"</p>
+          <p>At Healthspan.Asia, everything we do is in service of one goal: extending the years in which you feel strong, clear, and fully yourself.</p>
+          <a href="#what-affects" class="btn btn-secondary">What affects your healthspan? →</a>
+        </div>
+      </div>
+    </div>
+    <div class="nature-divider nature-divider-bottom"></div>
+  </section>
+
+  <!-- WHAT AFFECTS YOUR HEALTHSPAN -->
+  <section class="what-affects" id="what-affects">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">The Factors at Play</div>
+        <h2>What Shapes Your Healthspan?</h2>
+        <p class="section-sub">Your healthspan isn't fixed. It's shaped by a complex web of factors, some inherited and most influenced by how you live. Understanding them is the first step to changing them.</p>
+      </div>
+      <div class="affects-grid">
+        <div class="affect-card">
+          <div class="affect-icon"><svg class="ico" aria-hidden="true"><use href="#i-dna"/></svg></div>
+          <h3>Genotype vs Phenotype</h3>
+          <p>Your genes are your starting point, not your destiny. Genotype is what you're born with. Phenotype is how those genes express themselves based on your environment and choices. We can't change your DNA, but we can change almost everything else.</p>
+        </div>
+        <div class="affect-card">
+          <div class="affect-icon"><svg class="ico" aria-hidden="true"><use href="#i-hourglass"/></svg></div>
+          <h3>Age</h3>
+          <p>Biological ageing is real and measurable, but it's not a straight line. The rate at which you age is highly variable, and the right interventions at the right time can slow it meaningfully. Many of our members find their biological age is younger than their chronological age after working with us.</p>
+        </div>
+        <div class="affect-card">
+          <div class="affect-icon"><svg class="ico" aria-hidden="true"><use href="#i-person"/></svg></div>
+          <h3>Sex</h3>
+          <p>Men and women age differently, each with their own hormonal shifts, cardiovascular risk patterns, and bone density changes that require specific, tailored attention. Our work accounts for your biology as it actually is.</p>
+        </div>
+        <div class="affect-card">
+          <div class="affect-icon"><svg class="ico" aria-hidden="true"><use href="#i-flame"/></svg></div>
+          <h3>Oxidation & Metabolic Rate</h3>
+          <p>Oxidative stress, the wear and tear of living, is one of the primary drivers of ageing at a cellular level. How efficiently your body produces and uses energy, and how well it manages oxidative damage, matters enormously for how you feel and function.</p>
+        </div>
+        <div class="affect-card">
+          <div class="affect-icon"><svg class="ico" aria-hidden="true"><use href="#i-moon"/></svg></div>
+          <h3>Sleep</h3>
+          <p>Sleep is not downtime. It's when your body does its most important repair work. Poor sleep accelerates almost every aspect of biological ageing, from cognitive decline to metabolic dysfunction. It's one of the most powerful levers we have.</p>
+        </div>
+        <div class="affect-card">
+          <div class="affect-icon"><svg class="ico" aria-hidden="true"><use href="#i-leaf"/></svg></div>
+          <h3>Nutrition</h3>
+          <p>What you eat, and how and when you eat it, shapes your cellular environment every single day. There's no universal diet, but there are principles grounded in good science that we tailor precisely to your biology and your life.</p>
+        </div>
+        <div class="affect-card">
+          <div class="affect-icon"><svg class="ico" aria-hidden="true"><use href="#i-activity"/></svg></div>
+          <h3>Exercise & Activity</h3>
+          <p>Movement is medicine, and the evidence is overwhelming. The right kinds of exercise, calibrated to where you are and where you want to go, can extend both lifespan and healthspan more than almost any other intervention we know of.</p>
+        </div>
+        <div class="affect-card">
+          <div class="affect-icon"><svg class="ico" aria-hidden="true"><use href="#i-brain"/></svg></div>
+          <h3>State of Mind</h3>
+          <p>How you feel emotionally has direct, measurable effects on your physical health: your immune function, hormonal balance, cardiovascular health, and rate of ageing. Wellbeing isn't a soft concept; it's a biological reality.</p>
+        </div>
+        <div class="affect-card">
+          <div class="affect-icon"><svg class="ico" aria-hidden="true"><use href="#i-sun"/></svg></div>
+          <h3>Lifestyle</h3>
+          <p>The accumulation of daily habits, from how you manage stress to the relationships you maintain and the environments you inhabit, collectively shapes your healthspan perhaps more than any single factor.</p>
+        </div>
+        <div class="affect-card">
+          <div class="affect-icon"><svg class="ico" aria-hidden="true"><use href="#i-stethoscope"/></svg></div>
+          <h3>Your Medical History</h3>
+          <p>Existing conditions, past injuries, medications, and family health history all play a role. We work alongside your doctors, not around them, to ensure your health plan accounts for the full picture of who you are medically.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- YOUR OBJECTIVES -->
+  <section class="objectives" id="objectives">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">Where Do You Want to Go?</div>
+        <h2>What do you want from<br />our work together?</h2>
+        <p class="section-sub">There's no wrong answer. Some people arrive knowing exactly what they want. Others feel that something needs to change but aren't sure what. Both are a perfectly good place to start.</p>
+      </div>
+
+      <div class="objectives-grid" id="objectivesGrid">
+        <button class="objective-card" onclick="selectObjective(this)">
+          <div class="obj-icon"><svg class="ico" aria-hidden="true"><use href="#i-zap"/></svg></div>
+          <h4>Feel more energetic and vital, day to day</h4>
+        </button>
+        <button class="objective-card" onclick="selectObjective(this)">
+          <div class="obj-icon"><svg class="ico" aria-hidden="true"><use href="#i-target"/></svg></div>
+          <h4>Reach a healthy weight and body composition</h4>
+        </button>
+        <button class="objective-card" onclick="selectObjective(this)">
+          <div class="obj-icon"><svg class="ico" aria-hidden="true"><use href="#i-dumbbell"/></svg></div>
+          <h4>Get stronger and more physically capable</h4>
+        </button>
+        <button class="objective-card" onclick="selectObjective(this)">
+          <div class="obj-icon"><svg class="ico" aria-hidden="true"><use href="#i-plus-circle"/></svg></div>
+          <h4>Recover from pain, injury, or a chronic issue</h4>
+        </button>
+        <button class="objective-card" onclick="selectObjective(this)">
+          <div class="obj-icon"><svg class="ico" aria-hidden="true"><use href="#i-moon"/></svg></div>
+          <h4>Sleep better and wake up actually rested</h4>
+        </button>
+        <button class="objective-card" onclick="selectObjective(this)">
+          <div class="obj-icon"><svg class="ico" aria-hidden="true"><use href="#i-bar-chart"/></svg></div>
+          <h4>Understand and improve my health markers</h4>
+        </button>
+        <button class="objective-card" onclick="selectObjective(this)">
+          <div class="obj-icon"><svg class="ico" aria-hidden="true"><use href="#i-brain"/></svg></div>
+          <h4>Sharper thinking and better emotional balance</h4>
+        </button>
+        <button class="objective-card" onclick="selectObjective(this)">
+          <div class="obj-icon"><svg class="ico" aria-hidden="true"><use href="#i-heart"/></svg></div>
+          <h4>Reduce my risk of serious illness in the future</h4>
+        </button>
+      </div>
+
+      <div class="objectives-footer">
+        <div class="objectives-cta" id="objectivesCta" style="display:none;">
+          <p>Good. We'd love to talk about those goals with you.</p>
+          <a href="#consult" class="btn btn-primary">Let's begin →</a>
+        </div>
+        <div class="objectives-unsure">
+          <p>Not sure what you're looking for yet? That's completely fine. Our short questionnaire can help you think it through.</p>
+          <a href="#" class="btn btn-outline">Take the questionnaire →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT DOES HEALTHSPAN.ASIA DO — SERVICES -->
+  <section class="services" id="services">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">Our Approach</div>
+        <h2>Health Coaching Across<br />Three Dimensions of You</h2>
+        <p class="section-sub">Good health isn't just physical. We work with all of who you are: body, mind, and spirit, because all three are connected, and all three matter for how well you live.</p>
+      </div>
+
+      <div class="dimensions-row">
+        <div class="dimension-card">
+          <div class="dim-icon"><svg class="ico" aria-hidden="true"><use href="#i-activity"/></svg></div>
+          <h3>Physical</h3>
+          <p>How your body moves, functions, and recovers. Strength, fitness, weight, pain, sleep, nutrition, hormones: the tangible, measurable foundation of your health.</p>
+        </div>
+        <div class="dimension-card">
+          <div class="dim-icon"><svg class="ico" aria-hidden="true"><use href="#i-brain"/></svg></div>
+          <h3>Mental & Emotional</h3>
+          <p>How you think, feel, and respond to the world. Cognitive sharpness, stress management, emotional resilience, and the relationship between your inner life and your physical health.</p>
+        </div>
+        <div class="dimension-card">
+          <div class="dim-icon"><svg class="ico" aria-hidden="true"><use href="#i-sun"/></svg></div>
+          <h3>Spiritual</h3>
+          <p>Meaning, purpose, and connection. Not religious unless you want it to be, but the deeper sense of what makes life feel worthwhile, and why that belongs in a health conversation.</p>
+        </div>
+      </div>
+
+      <div class="services-divider">
+        <span>The specific services we provide</span>
+      </div>
+
+      <div class="services-carousel-outer">
+        <div class="services-carousel-wrap" id="servicesWrap">
+          <div class="services-grid-track" id="servicesTrack">
+
+            <div class="service-card">
+              <div class="service-icon"><svg class="ico" aria-hidden="true"><use href="#i-dumbbell"/></svg></div>
+              <h3>Strength, Conditioning & Cardio</h3>
+              <p>Training built specifically for the 50+ body, not adapted from something designed for 30-year-olds. We build strength, protect your joints, improve your cardiovascular health, and keep you moving well for years to come.</p>
+            </div>
+            <div class="service-card">
+              <div class="service-icon"><svg class="ico" aria-hidden="true"><use href="#i-leaf"/></svg></div>
+              <h3>Nutritional Advice & Support</h3>
+              <p>Evidence-based guidance tailored to your bloodwork, goals, and the reality of your life. No extreme diets. No one-size-fits-all rules. Just the food habits that actually work for your biology.</p>
+            </div>
+            <div class="service-card">
+              <div class="service-icon"><svg class="ico" aria-hidden="true"><use href="#i-moon"/></svg></div>
+              <h3>Sleep Advice & Support</h3>
+              <p>Sleep is the foundation everything else rests on. We assess what's getting in the way, and build practical, sustainable changes to help you sleep more deeply and wake up restored.</p>
+            </div>
+            <div class="service-card">
+              <div class="service-icon"><svg class="ico" aria-hidden="true"><use href="#i-stretch"/></svg></div>
+              <h3>Mobility & Flexibility</h3>
+              <p>Moving freely, without pain, stiffness, or limitation, is one of the great quiet joys of a healthy body. We work on mobility and flexibility as a core part of your programme, not an afterthought.</p>
+            </div>
+            <div class="service-card">
+              <div class="service-icon"><svg class="ico" aria-hidden="true"><use href="#i-heart"/></svg></div>
+              <h3>Sexuality Advice & Support</h3>
+              <p>An often-ignored part of health after 50, and one that matters enormously for quality of life. We create a safe, private space to talk honestly about sexual health, libido, intimacy, and what can help.</p>
+            </div>
+            <div class="service-card">
+              <div class="service-icon"><svg class="ico" aria-hidden="true"><use href="#i-brain"/></svg></div>
+              <h3>State of Mind & Its Management</h3>
+              <p>Stress, anxiety, low mood, and the mental weight of a busy life all have real physical consequences. We explore what's contributing, and what changes in thinking, habit, and lifestyle might meaningfully shift things.</p>
+            </div>
+            <div class="service-card">
+              <div class="service-icon"><svg class="ico" aria-hidden="true"><use href="#i-plus-circle"/></svg></div>
+              <h3>Physiotherapy & Injury Care</h3>
+              <p>Rehabilitation, chronic pain management, and postural correction from specialists who understand the ageing body. We treat what's hurting now and prevent what might hurt next.</p>
+            </div>
+            <div class="service-card">
+              <div class="service-icon"><svg class="ico" aria-hidden="true"><use href="#i-stethoscope"/></svg></div>
+              <h3>Medical Coordination</h3>
+              <p>Access to our vetted network of doctors and specialists, with a concierge who briefs them, follows up on results, and makes sure nothing falls through the cracks of a fragmented healthcare system.</p>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="services-carousel-nav">
+          <button class="svc-btn" id="svcPrev" aria-label="Previous service">&#8592;</button>
+          <div class="svc-progress-track">
+            <div class="svc-progress-fill" id="svcProgressFill"></div>
+          </div>
+          <button class="svc-btn" id="svcNext" aria-label="Next service">&#8594;</button>
+          <span class="svc-counter" id="svcCounter">1 – 3 of 8</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW WE WORK TOGETHER -->
+  <section class="how-we-work" id="how-we-work">
+    <div class="nature-wave-top"></div>
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">How We Work Together</div>
+        <h2>A Relationship, Not a Programme</h2>
+        <p class="section-sub">We don't hand you a plan and leave you to it. We walk alongside you, adjusting and responding to what your body and life actually need.</p>
+      </div>
+
+      <div class="how-grid">
+        <div class="how-card">
+          <div class="how-num">01</div>
+          <h3>A Conversation, Not a Consultation</h3>
+          <p>We start with a genuine conversation, unhurried, open, and curious. We want to understand not just your health history, but your life: your work, your relationships, your fears, your hopes. This is where we get to know you as a whole person.</p>
+        </div>
+        <div class="how-card">
+          <div class="how-num">02</div>
+          <h3>Building Your Health Picture</h3>
+          <p>Comprehensive bloodwork, body composition, movement assessment, sleep quality, and lifestyle audit. We gather the data we need to understand where you actually are, not where you assume you are.</p>
+        </div>
+        <div class="how-card">
+          <div class="how-num">03</div>
+          <h3>Your Personal Health Blueprint</h3>
+          <p>Based on everything we've learned, we put together a clear, integrated plan. Not a collection of separate recommendations from separate providers. One coherent plan, held together by your dedicated concierge.</p>
+        </div>
+        <div class="how-card">
+          <div class="how-num">04</div>
+          <h3>Bringing in the Right Specialists</h3>
+          <p>Depending on what you need, we bring in specialists from our network: physiotherapists, doctors, psychologists, sleep experts. We brief them fully, coordinate their work, and ensure they're all pulling in the same direction.</p>
+        </div>
+        <div class="how-card">
+          <div class="how-num">05</div>
+          <h3>An Ongoing, Evolving Partnership</h3>
+          <p>Health isn't a destination. It's a practice. We review your progress regularly, re-test your biomarkers quarterly, and adapt your plan as your life changes. Your concierge is always available when you need them.</p>
+        </div>
+        <div class="how-card how-card-quote">
+          <div class="how-quote-mark">"</div>
+          <p class="how-quote-text">The goal isn't to fix you. You're not broken. It's to help you become the healthiest, most vital version of yourself. That looks different for everyone, and we never forget it.</p>
+          <span class="how-quote-attr">Healthspan.Asia philosophy</span>
+        </div>
+      </div>
+    </div>
+    <div class="nature-wave-bottom"></div>
+  </section>
+
+  <!-- PERSONALISATION FOR YOU -->
+  <section class="personalisation" id="personalisation">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">Tailored to You</div>
+        <h2>No Two People Are the Same.<br />Neither Are Their Plans.</h2>
+        <p class="section-sub">Generic health advice produces generic results. Everything we do is personalised to your biology, your life, and what matters to you.</p>
+      </div>
+
+      <div class="personal-cards">
+        <div class="personal-card">
+          <div class="personal-icon"><svg class="ico" aria-hidden="true"><use href="#i-flask"/></svg></div>
+          <h3>The Science Part</h3>
+          <p>We start with data. Comprehensive biomarker testing, covering bloodwork, hormonal panels, metabolic markers, cardiovascular risk and inflammatory load, gives us an objective picture of what's happening inside your body.</p>
+          <p>Over time, we track how these numbers move in response to changes in your lifestyle, training, and nutrition. This turns guesswork into evidence, and progress into something you can see.</p>
+          <ul class="personal-list">
+            <li>Full bloodwork and hormonal panel</li>
+            <li>Body composition and metabolic rate</li>
+            <li>HRV and sleep quality measurement</li>
+            <li>Biological age assessment</li>
+            <li>Quarterly retesting to track progress</li>
+          </ul>
+        </div>
+        <div class="personal-card personal-card-featured">
+          <div class="personal-icon"><svg class="ico" aria-hidden="true"><use href="#i-pencil"/></svg></div>
+          <h3>The Art Part</h3>
+          <p>Data tells us a lot, but it doesn't tell us everything. The art of what we do is the human part: listening carefully, reading between the lines, understanding what motivates you, what holds you back, and what kind of support actually helps you change.</p>
+          <p>Your health concierge gets to know you over time. They notice patterns. They ask the questions that open things up. They know when to push and when to be gentle. No algorithm does this.</p>
+          <ul class="personal-list">
+            <li>Deep listening and human understanding</li>
+            <li>Motivational style and pacing matched to you</li>
+            <li>Cultural and lifestyle sensitivity</li>
+            <li>Honest, kind feedback when it's needed</li>
+            <li>A safe space to be frank about what's hard</li>
+          </ul>
+        </div>
+        <div class="personal-card">
+          <div class="personal-icon"><svg class="ico" aria-hidden="true"><use href="#i-trending"/></svg></div>
+          <h3>Tracking Progress & Adjusting</h3>
+          <p>We review your progress regularly, looking not just at the numbers but at how you feel, what's changed, and what hasn't. Where things aren't working, we adjust. Where they are, we build on them.</p>
+          <p>Nothing about your plan is set in stone. Life changes. Your body changes. Your goals may evolve. We stay curious and responsive throughout.</p>
+          <ul class="personal-list">
+            <li>Monthly check-ins with your concierge</li>
+            <li>Quarterly biomarker retesting</li>
+            <li>Plan adjustments based on real progress</li>
+            <li>Subjective wellbeing tracked alongside data</li>
+            <li>Long-term health trajectory review</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT / MISSION -->
+  <section class="about" id="about">
+    <div class="container about-inner">
+      <div class="about-image">
+        <div class="about-img-placeholder">
+          <div class="about-img-leaves">
+            <div class="leaf leaf-1"></div>
+            <div class="leaf leaf-2"></div>
+            <div class="leaf leaf-3"></div>
+          </div>
+          <div class="about-img-content">
+            <div class="about-img-icon">
+              <svg class="ico" aria-hidden="true"><use href="#i-sprout"/></svg>
+            </div>
+            <p>Our mission</p>
+          </div>
+        </div>
+        <div class="about-stat-card">
+          <span class="about-stat-num">50+</span>
+          <span class="about-stat-label">Average age of our members when they start</span>
+        </div>
+      </div>
+      <div class="about-text">
+        <div class="section-tag">About & Mission</div>
+        <h2>We Exist Because People Deserve Better After 50</h2>
+        <p>We bring together the latest, most vital Healthspan knowledge and tailor it to your individual needs: your biology, your medical history, and your lifestyle. Then we combine that into practical programmes and connect you to the support you need to implement them.</p>
+        <p>That's how we partner with you to maximise your Healthspan, so you can <em>Live Better. For Longer.</em></p>
+        <p>Most people over 50 are falling through a gap between "not sick enough to see a doctor" and "genuinely thriving." We were created to close that gap by bringing together the right people, the right knowledge, and the right kind of care, in a way that fits the reality of a full, busy life.</p>
+        <div class="about-values">
+          <div class="value-item"><span class="value-check">✓</span> Evidence-based, not trend-based</div>
+          <div class="value-item"><span class="value-check">✓</span> Whole-person, not symptom-focused</div>
+          <div class="value-item"><span class="value-check">✓</span> Proactive, not reactive</div>
+          <div class="value-item"><span class="value-check">✓</span> Built exclusively for adults 50+</div>
+        </div>
+        <a href="#consult" class="btn btn-primary">Begin Your Journey</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="testimonials" id="testimonials">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">Member Stories</div>
+        <h2>In Their Own Words</h2>
+        <p class="section-sub">These are real people, with real lives, real challenges, and real results. We share their stories with their permission and gratitude.</p>
+      </div>
+
+      <div class="testimonial-slider" id="testimonialSlider">
+        <div class="testimonial-track" id="testimonialTrack">
+
+          {% for slide in testimonials %}
+          <div class="testimonial-slide">
+            <div class="testimonials-grid">
+              {% for card in slide.cards %}
+              <div class="testimonial-card{% if card.featured %} featured{% endif %}">
+                <div class="testimonial-quote">"</div>
+                <p class="testimonial-text">{{ card.quote }}</p>
+                <div class="testimonial-author">
+                  <div class="author-avatar">{{ card.initials }}</div>
+                  <div class="author-info">
+                    <strong>{{ card.name }}</strong>
+                    <span>{{ card.role }}</span>
+                  </div>
+                  <div class="testimonial-stars">★★★★★</div>
+                </div>
+              </div>
+              {% endfor %}
+            </div>
+          </div>
+          {% endfor %}
+
+        </div>
+      </div>
+
+      <div class="testimonial-pagination">
+        <button class="page-btn page-prev" id="pagePrev" aria-label="Previous">&#8592;</button>
+        <div class="page-dots" id="pageDots">
+          <button class="dot active" data-index="0"></button>
+          <button class="dot" data-index="1"></button>
+          <button class="dot" data-index="2"></button>
+        </div>
+        <button class="page-btn page-next" id="pageNext" aria-label="Next">&#8594;</button>
+      </div>
+      <div class="testimonial-counter" id="testimonialCounter">1 / 3</div>
+    </div>
+  </section>
+
+  <!-- DEMYSTIFICATION GLOSSARY -->
+  <section class="glossary" id="glossary">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">Demystification List</div>
+        <h2>We Believe in Plain Language</h2>
+        <p class="section-sub">Health and longevity science comes with a lot of vocabulary. You deserve to understand it in plain, clear terms, without needing a medical degree.</p>
+      </div>
+      <div class="glossary-note">
+        <span class="glossary-note-icon">
+          <svg class="ico" aria-hidden="true"><use href="#i-book"/></svg>
+        </span>
+        <p>This glossary is growing. We add new entries regularly as we learn what our members find confusing or want to understand better. If there's something you'd like us to explain, just ask.</p>
+      </div>
+      <div class="glossary-list" id="glossaryList">
+
+        <div class="glossary-item">
+          <button class="glossary-term" onclick="toggleGlossary(this)">
+            Healthspan vs Lifespan
+            <span class="glossary-arrow">▼</span>
+          </button>
+          <div class="glossary-def">
+            <p><strong>Lifespan</strong> is simply how long you live, the total number of years from birth to death. <strong>Healthspan</strong> is how many of those years you spend in good health: physically capable, mentally sharp, and emotionally well. The gap between them, the years of meaningful decline, is what we work to compress. Most people today have a healthspan that ends 10 to 15 years before their lifespan does.</p>
+          </div>
+        </div>
+
+        <div class="glossary-item">
+          <button class="glossary-term" onclick="toggleGlossary(this)">
+            VO₂ Max
+            <span class="glossary-arrow">▼</span>
+          </button>
+          <div class="glossary-def">
+            <p>VO₂ max is a measure of how efficiently your body uses oxygen during exercise, which is essentially your aerobic capacity. It's one of the single strongest predictors of long-term health and longevity we have. The good news: it's highly trainable, even in your 50s, 60s, and beyond. Improving it is one of the most impactful things you can do for your healthspan.</p>
+          </div>
+        </div>
+
+        <div class="glossary-item">
+          <button class="glossary-term" onclick="toggleGlossary(this)">
+            HRV: Heart Rate Variability
+            <span class="glossary-arrow">▼</span>
+          </button>
+          <div class="glossary-def">
+            <p>HRV is the natural variation in time between your heartbeats. It might sound like a technical measurement, but it's actually a beautifully sensitive indicator of how your nervous system is coping with stress, training load, and sleep quality. Higher HRV generally means your body is recovering well and has good adaptive capacity. We track it regularly.</p>
+          </div>
+        </div>
+
+        <div class="glossary-item">
+          <button class="glossary-term" onclick="toggleGlossary(this)">
+            Metabolic Health
+            <span class="glossary-arrow">▼</span>
+          </button>
+          <div class="glossary-def">
+            <p>Your metabolic health is essentially how well your body processes and uses energy. It's measured through things like blood sugar control, insulin sensitivity, blood pressure, waist circumference, and triglyceride levels. Poor metabolic health is one of the biggest drivers of disease and accelerated ageing, and it's one of the most responsive to lifestyle change.</p>
+          </div>
+        </div>
+
+        <div class="glossary-item">
+          <button class="glossary-term" onclick="toggleGlossary(this)">
+            Sarcopenia
+            <span class="glossary-arrow">▼</span>
+          </button>
+          <div class="glossary-def">
+            <p>Sarcopenia is the gradual loss of muscle mass and strength that comes with ageing, typically accelerating after 50. It's one of the primary drivers of frailty, falls, metabolic dysfunction, and loss of independence in later life. The good news: resistance training is the most effective prevention and treatment we have. This is why strength work is so central to everything we do.</p>
+          </div>
+        </div>
+
+        <div class="glossary-item">
+          <button class="glossary-term" onclick="toggleGlossary(this)">
+            Hormesis
+            <span class="glossary-arrow">▼</span>
+          </button>
+          <div class="glossary-def">
+            <p>Hormesis is the biological principle that small, manageable doses of stress can make you stronger, while too much of the same stress causes harm. Exercise is a perfect example: the physical stress of training breaks down muscle tissue, which then rebuilds stronger. Cold exposure, fasting, and certain dietary compounds work similarly. We use this principle deliberately in your programme.</p>
+          </div>
+        </div>
+
+        <div class="glossary-item">
+          <button class="glossary-term" onclick="toggleGlossary(this)">
+            Autophagy
+            <span class="glossary-arrow">▼</span>
+          </button>
+          <div class="glossary-def">
+            <p>Autophagy is your body's internal cleanup system, the process by which cells identify and break down damaged or dysfunctional components and recycle them. Think of it as cellular housekeeping. It declines with age and poor lifestyle habits. Sleep, fasting, and certain forms of exercise all stimulate it. It's one of the mechanisms through which healthy habits protect against disease and ageing at a cellular level.</p>
+          </div>
+        </div>
+
+        <div class="glossary-item">
+          <button class="glossary-term" onclick="toggleGlossary(this)">
+            Testosterone & Hormonal Health
+            <span class="glossary-arrow">▼</span>
+          </button>
+          <div class="glossary-def">
+            <p>Sex hormones naturally decline with age — testosterone in men, oestrogen and progesterone in women — typically from the late 30s onwards. This isn't inevitable doom, but it does have real effects: on energy, libido, body composition, mood, and cognitive function. We assess your hormonal picture carefully and work with both lifestyle interventions and, where appropriate, medical support to address any significant imbalances.</p>
+          </div>
+        </div>
+
+        <div class="glossary-item">
+          <button class="glossary-term" onclick="toggleGlossary(this)">
+            Chronic Inflammation
+            <span class="glossary-arrow">▼</span>
+          </button>
+          <div class="glossary-def">
+            <p>Acute inflammation is your body's healthy response to injury or infection. Chronic inflammation is something different: a persistent, low-grade inflammatory state that quietly damages tissues and organs over years. It's linked to almost every major age-related disease. Diet, sleep, stress, exercise, and body composition are all key levers for managing it.</p>
+          </div>
+        </div>
+
+        <div class="glossary-item">
+          <button class="glossary-term" onclick="toggleGlossary(this)">
+            Biological Age vs Chronological Age
+            <span class="glossary-arrow">▼</span>
+          </button>
+          <div class="glossary-def">
+            <p>Your chronological age is simply how many years you've been alive. Your biological age is how old your body actually is, measured through biomarkers like epigenetic methylation patterns, telomere length, and functional health markers. These two numbers often differ significantly, and biological age is the one we can actually influence. Many of our members find their biological age is meaningfully lower than their chronological age after a period of focused work.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SOCIAL PROOF BAR -->
+  <section class="proof-bar">
+    <div class="container proof-inner">
+      {% for item in proof %}
+      <div class="proof-item">
+        <span class="proof-num">{{ item.num }}</span>
+        <span class="proof-text">{{ item.text }}</span>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+
+  <!-- CTA SECTION -->
+  <section class="cta-section" id="consult">
+    <div class="cta-nature-left"></div>
+    <div class="cta-nature-right"></div>
+    <div class="container cta-inner">
+      <div class="cta-badge">A gentle first step. No pressure.</div>
+      <h2>A Conversation Is a<br />Good Place to Start</h2>
+      <p>Book a free, unhurried 30-minute conversation with one of our health concierges. We'll listen carefully to where you are, what you're hoping for, and tell you honestly whether we think we can help. No pitch. No hard sell.</p>
+      <form class="cta-form" id="ctaForm" onsubmit="handleFormSubmit(event)">
+        <div class="form-row">
+          <input type="text" placeholder="Your Name" required class="form-input" />
+          <input type="email" placeholder="Email Address" required class="form-input" />
+        </div>
+        <div class="form-row">
+          <input type="tel" placeholder="WhatsApp / Phone Number" class="form-input" />
+          <select class="form-input form-select">
+            <option value="" disabled selected>What's brought you here today?</option>
+            <option>I want more energy and vitality</option>
+            <option>I'd like to lose weight and improve my fitness</option>
+            <option>I have pain or injury I need help with</option>
+            <option>I want to understand my health markers</option>
+            <option>I want to sleep better</option>
+            <option>I'm not sure. I just know something needs to change</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn-primary btn-lg btn-full">Book My Free Conversation →</button>
+        <p class="form-disclaimer">No spam, ever. Your details are safe with us. We'll be in touch within 24 hours.</p>
+      </form>
+      <div class="form-success" id="formSuccess" style="display:none;">
+        <div class="success-icon">✓</div>
+        <h3>Thank you. We'll be in touch soon.</h3>
+        <p>One of our health concierges will reach out within 24 hours to arrange your free conversation. We're looking forward to hearing about you.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">Questions</div>
+        <h2>Things People Often Ask</h2>
+      </div>
+      <div class="faq-list">
+        {% for item in faqs %}
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            {{ item.question }}
+            <span class="faq-arrow">▼</span>
+          </button>
+          <div class="faq-answer">
+            <p>{{ item.answer }}</p>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a href="#" class="logo">
+          <img src="logo.png?v=2" alt="Healthspan Concierge — Live Better. For Longer." class="logo-img" style="height:48px!important;max-height:48px!important;width:auto!important;margin-left:36px;" />
+        </a>
+        <p class="footer-tagline">Longevity Concierge for Adults 50+ Across Asia</p>
+        <div class="footer-social">
+          <a href="#" aria-label="LinkedIn">in</a>
+          <a href="#" aria-label="Instagram">ig</a>
+          <a href="#" aria-label="WhatsApp">wa</a>
+        </div>
+      </div>
+      <div class="footer-links">
+        <div class="footer-col">
+          <h4>Our Approach</h4>
+          <a href="#services">Strength & Conditioning</a>
+          <a href="#services">Nutrition</a>
+          <a href="#services">Sleep</a>
+          <a href="#services">Mobility</a>
+          <a href="#services">State of Mind</a>
+          <a href="#services">Medical Coordination</a>
+        </div>
+        <div class="footer-col">
+          <h4>Learn</h4>
+          <a href="#what-is-healthspan">What is Healthspan?</a>
+          <a href="#what-affects">What Affects Healthspan?</a>
+          <a href="#glossary">Plain Language Glossary</a>
+          <a href="#personalisation">How We Personalise</a>
+        </div>
+        <div class="footer-col">
+          <h4>Locations</h4>
+          <span>Singapore</span>
+          <span>Hong Kong</span>
+          <span>Tokyo</span>
+          <span>Bangkok</span>
+          <span>Kuala Lumpur</span>
+          <span>+ 3 more cities</span>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p>&copy; 2026 Healthspan.Asia. All rights reserved.</p>
+        <div class="footer-legal">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    if (window.netlifyIdentity) {
+      window.netlifyIdentity.on("init", user => {
+        if (!user) {
+          window.netlifyIdentity.on("login", () => { document.location.href = "/admin/"; });
+        }
+      });
+    }
+  </script>
+</body>
+</html>

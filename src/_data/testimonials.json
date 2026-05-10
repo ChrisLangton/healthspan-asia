@@ -1,0 +1,80 @@
+[
+  {
+    "slide": 1,
+    "cards": [
+      {
+        "featured": true,
+        "quote": "I arrived at 54, overweight, back in bad shape, bloodwork heading in the wrong direction. Eighteen months later I've lost 22kg, my HbA1c is back in normal range, and I completed my first half-marathon. I genuinely didn't believe any of that was still possible at my age. I was wrong.",
+        "name": "David L.",
+        "role": "CEO, Hong Kong · Age 55",
+        "initials": "DL"
+      },
+      {
+        "featured": false,
+        "quote": "The coordination alone is worth it. My cardiologist, trainer, and nutritionist are actually talking to each other now. For the first time in my adult life, I feel like I have a team genuinely looking after me.",
+        "name": "Michael R.",
+        "role": "Lawyer, Singapore · Age 58",
+        "initials": "MR"
+      },
+      {
+        "featured": false,
+        "quote": "Three years of chronic knee pain, gone in 12 weeks. Then my trainer rebuilt my lower body strength properly. I'm back on the golf course five days a week and hitting it further than I did at 40.",
+        "name": "James T.",
+        "role": "Banker, Tokyo · Age 52",
+        "initials": "JT"
+      }
+    ]
+  },
+  {
+    "slide": 2,
+    "cards": [
+      {
+        "featured": true,
+        "quote": "My testosterone was at rock bottom and I had no idea. Within six months of working with them on hormones and lifestyle, I feel like a different man. My wife noticed before I did. The sleep alone changed everything. I hadn't realised how badly I was sleeping until I wasn't anymore.",
+        "name": "Robert K.",
+        "role": "Entrepreneur, Bangkok · Age 56",
+        "initials": "RK"
+      },
+      {
+        "featured": false,
+        "quote": "I'd tried everything. Nothing stuck until someone looked at all of it together. The nutrition plan they gave me actually fits my life, around my travel and social schedule. I can keep it up because it was designed around me.",
+        "name": "Simon C.",
+        "role": "COO, Shanghai · Age 61",
+        "initials": "SC"
+      },
+      {
+        "featured": false,
+        "quote": "I was sceptical, expecting another wellness programme. But seeing your own biomarkers move every quarter is profoundly motivating. I'm now more data-driven about my health than I am about my business, and that's saying something.",
+        "name": "Andrew N.",
+        "role": "Fund Manager, Seoul · Age 53",
+        "initials": "AN"
+      }
+    ]
+  },
+  {
+    "slide": 3,
+    "cards": [
+      {
+        "featured": true,
+        "quote": "After my heart attack at 57, I was frightened and lost. Healthspan.Asia coordinated my entire recovery: cardiac rehab, lifestyle, every specialist, and made sure they all had the full picture of who I am. Two years on, my cardiologist says I'm in better shape than most of his 40-year-old patients. I am deeply grateful.",
+        "name": "Peter W.",
+        "role": "Director, Kuala Lumpur · Age 59",
+        "initials": "PW"
+      },
+      {
+        "featured": false,
+        "quote": "The conversations about state of mind surprised me most. I came for the physical. I stayed for the whole picture. My clarity at work, my patience, my sense of calm have all shifted in ways I didn't expect. I feel like myself again.",
+        "name": "Brian H.",
+        "role": "Managing Partner, Mumbai · Age 54",
+        "initials": "BH"
+      },
+      {
+        "featured": false,
+        "quote": "My back is fixed. My energy is back. I'm sleeping properly for the first time in years. Worth every cent, and I say that as someone who was very sceptical about paying for this kind of support.",
+        "name": "Thomas M.",
+        "role": "Retired Executive, Taipei · Age 63",
+        "initials": "TM"
+      }
+    ]
+  }
+]

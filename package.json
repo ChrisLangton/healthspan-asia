@@ -1,0 +1,12 @@
+{
+  "name": "healthspan-asia",
+  "version": "1.0.0",
+  "description": "Healthspan Concierge landing page",
+  "scripts": {
+    "build": "eleventy",
+    "dev": "eleventy --serve"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1"
+  }
+}

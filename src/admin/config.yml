@@ -1,0 +1,74 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "src/images"
+public_folder: "/images"
+
+collections:
+
+  - name: "hero"
+    label: "Hero Section"
+    files:
+      - label: "Hero Content"
+        name: "hero"
+        file: "src/_data/hero.json"
+        fields:
+          - { label: "Badge Text", name: "badge", widget: "string" }
+          - { label: "Stat 1 — Number", name: "stat1_num", widget: "string" }
+          - { label: "Stat 1 — Label", name: "stat1_label", widget: "string" }
+          - { label: "Stat 2 — Number", name: "stat2_num", widget: "string" }
+          - { label: "Stat 2 — Label", name: "stat2_label", widget: "string" }
+          - { label: "Stat 3 — Number", name: "stat3_num", widget: "string" }
+          - { label: "Stat 3 — Label", name: "stat3_label", widget: "string" }
+
+  - name: "testimonials"
+    label: "Testimonials"
+    files:
+      - label: "Testimonial Slides"
+        name: "testimonials"
+        file: "src/_data/testimonials.json"
+        fields:
+          - label: "Slides"
+            name: "slides"
+            widget: "list"
+            collapsed: false
+            fields:
+              - { label: "Slide Number", name: "slide", widget: "number" }
+              - label: "Cards"
+                name: "cards"
+                widget: "list"
+                fields:
+                  - { label: "Featured (first card in slide)", name: "featured", widget: "boolean", default: false }
+                  - { label: "Quote", name: "quote", widget: "text" }
+                  - { label: "Name", name: "name", widget: "string" }
+                  - { label: "Role & Location", name: "role", widget: "string" }
+                  - { label: "Initials", name: "initials", widget: "string" }
+
+  - name: "faqs"
+    label: "FAQs"
+    files:
+      - label: "FAQ Items"
+        name: "faqs"
+        file: "src/_data/faqs.json"
+        fields:
+          - label: "Questions"
+            name: "questions"
+            widget: "list"
+            fields:
+              - { label: "Question", name: "question", widget: "string" }
+              - { label: "Answer", name: "answer", widget: "text" }
+
+  - name: "proof"
+    label: "Social Proof Bar"
+    files:
+      - label: "Stats"
+        name: "proof"
+        file: "src/_data/proof.json"
+        fields:
+          - label: "Stats"
+            name: "stats"
+            widget: "list"
+            fields:
+              - { label: "Number / Stat", name: "num", widget: "string" }
+              - { label: "Description", name: "text", widget: "string" }
