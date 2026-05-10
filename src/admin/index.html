@@ -8,5 +8,128 @@
 </head>
 <body>
   <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+  <script>
+    // Inject site fonts and stylesheet into the preview iframe
+    CMS.registerPreviewStyle(
+      'https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap'
+    );
+    CMS.registerPreviewStyle('/style.css');
+
+    // ── FAQ preview ──────────────────────────────────────────────
+    var FaqPreview = createClass({
+      render: function() {
+        var entry = this.props.entry;
+        var questions = entry.getIn(['data', 'questions']);
+        questions = questions ? questions.toJS() : [];
+        return h('section', { className: 'faq', style: { padding: '48px 24px' } },
+          h('div', { className: 'section-header' },
+            h('div', { className: 'section-tag' }, 'Questions'),
+            h('h2', {}, 'Things People Often Ask')
+          ),
+          h('div', { className: 'faq-list' },
+            questions.map(function(item, i) {
+              return h('div', { className: 'faq-item', key: i },
+                h('button', { className: 'faq-question' },
+                  item.question,
+                  h('span', { className: 'faq-arrow' }, '▼')
+                ),
+                h('div', { className: 'faq-answer open' },
+                  h('p', {}, item.answer)
+                )
+              );
+            })
+          )
+        );
+      }
+    });
+    CMS.registerPreviewTemplate('faqs', FaqPreview);
+
+    // ── Testimonials preview ─────────────────────────────────────
+    var TestimonialsPreview = createClass({
+      render: function() {
+        var entry = this.props.entry;
+        var slides = entry.getIn(['data', 'slides']);
+        slides = slides ? slides.toJS() : [];
+        return h('section', { className: 'testimonials', style: { padding: '48px 24px' } },
+          h('div', { className: 'section-header' },
+            h('div', { className: 'section-tag' }, 'Member Stories'),
+            h('h2', {}, 'In Their Own Words')
+          ),
+          slides.map(function(slide, si) {
+            var cards = slide.cards || [];
+            return h('div', { key: si, style: { marginBottom: '32px' } },
+              h('p', { style: { fontWeight: 600, marginBottom: '12px', fontFamily: 'Poppins, sans-serif' } }, 'Slide ' + slide.slide),
+              h('div', { className: 'testimonials-grid' },
+                cards.map(function(card, ci) {
+                  return h('div', { className: 'testimonial-card' + (card.featured ? ' featured' : ''), key: ci },
+                    h('div', { className: 'testimonial-quote' }, '"'),
+                    h('p', { className: 'testimonial-text' }, card.quote),
+                    h('div', { className: 'testimonial-author' },
+                      h('div', { className: 'author-avatar' }, card.initials),
+                      h('div', { className: 'author-info' },
+                        h('strong', {}, card.name),
+                        h('span', {}, card.role)
+                      ),
+                      h('div', { className: 'testimonial-stars' }, '★★★★★')
+                    )
+                  );
+                })
+              )
+            );
+          })
+        );
+      }
+    });
+    CMS.registerPreviewTemplate('testimonials', TestimonialsPreview);
+
+    // ── Hero preview ─────────────────────────────────────────────
+    var HeroPreview = createClass({
+      render: function() {
+        var entry = this.props.entry;
+        var data = entry.get('data').toJS();
+        return h('section', { style: { padding: '48px 24px', fontFamily: 'Poppins, sans-serif' } },
+          h('div', { className: 'hero-badge' }, data.badge),
+          h('h1', { className: 'hero-headline', style: { margin: '24px 0' } },
+            'Live Better. For Longer.'
+          ),
+          h('div', { className: 'hero-trust', style: { display: 'flex', gap: '24px', marginTop: '32px' } },
+            h('div', { className: 'trust-item' },
+              h('span', { className: 'trust-num' }, data.stat1_num),
+              h('span', { className: 'trust-label' }, data.stat1_label)
+            ),
+            h('div', { className: 'trust-item' },
+              h('span', { className: 'trust-num' }, data.stat2_num),
+              h('span', { className: 'trust-label' }, data.stat2_label)
+            ),
+            h('div', { className: 'trust-item' },
+              h('span', { className: 'trust-num' }, data.stat3_num),
+              h('span', { className: 'trust-label' }, data.stat3_label)
+            )
+          )
+        );
+      }
+    });
+    CMS.registerPreviewTemplate('hero', HeroPreview);
+
+    // ── Proof bar preview ────────────────────────────────────────
+    var ProofPreview = createClass({
+      render: function() {
+        var entry = this.props.entry;
+        var stats = entry.getIn(['data', 'stats']);
+        stats = stats ? stats.toJS() : [];
+        return h('section', { className: 'proof-bar', style: { padding: '48px 24px' } },
+          h('div', { className: 'container proof-inner' },
+            stats.map(function(item, i) {
+              return h('div', { className: 'proof-item', key: i },
+                h('span', { className: 'proof-num' }, item.num),
+                h('span', { className: 'proof-text' }, item.text)
+              );
+            })
+          )
+        );
+      }
+    });
+    CMS.registerPreviewTemplate('proof', ProofPreview);
+  </script>
 </body>
 </html>
