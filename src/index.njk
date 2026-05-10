@@ -255,8 +255,8 @@
             <svg viewBox="0 0 660 400" xmlns="http://www.w3.org/2000/svg" class="hs-svg" role="img" aria-label="Chart: Successful Ageing — Healthspan versus Lifespan, adapted from Peter Attia's Outlive">
 
               <defs>
-                <marker id="arrowBlack" markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto">
-                  <path d="M0,0 L0,6 L8,3 z" fill="#111"/>
+                <marker id="arrowRed" markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto">
+                  <path d="M0,0 L0,6 L8,3 z" fill="#cc2200"/>
                 </marker>
                 <marker id="arrowGreen" markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto">
                   <path d="M0,0 L0,6 L8,3 z" fill="#00a878"/>
@@ -280,28 +280,23 @@
               <!-- X-axis label -->
               <text x="355" y="352" text-anchor="middle" fill="#111" font-size="14" font-family="Poppins, sans-serif" font-weight="700">Years of life</text>
 
-              <!-- BLACK curve: starts at same point as green, immediately declines — single cubic, no inflection -->
+              <!-- RED curve: starts at same point as green, immediately declines -->
               <path d="M 100,87 C 290,87 513,210 513,316"
-                    fill="none" stroke="#111" stroke-width="3" stroke-linecap="round"/>
+                    fill="none" stroke="#cc2200" stroke-width="3" stroke-linecap="round"/>
 
-              <!-- GREEN curve: starts at same point, flat then quadratic cliff — no inflection guaranteed -->
+              <!-- GREEN curve: starts at same point, flat then quadratic cliff -->
               <path d="M 100,87 L 470,87 Q 608,87 608,316"
                     fill="none" stroke="#00a878" stroke-width="3" stroke-linecap="round"/>
 
-              <!-- "Lifespan Ageing →" label — same y as Healthspan label -->
-              <text x="258" y="205" fill="#111" font-size="12.5" font-family="Poppins, sans-serif" font-weight="600">Lifespan</text>
-              <text x="258" y="221" fill="#111" font-size="12.5" font-family="Poppins, sans-serif" font-weight="600">Ageing</text>
-              <line x1="318" y1="213" x2="352" y2="185" stroke="#111" stroke-width="1.8" marker-end="url(#arrowBlack)"/>
+              <!-- "Lifespan Ageing" label -->
+              <text x="258" y="205" fill="#cc2200" font-size="12.5" font-family="Poppins, sans-serif" font-weight="600">Lifespan</text>
+              <text x="258" y="221" fill="#cc2200" font-size="12.5" font-family="Poppins, sans-serif" font-weight="600">Ageing</text>
+              <line x1="318" y1="213" x2="352" y2="185" stroke="#cc2200" stroke-width="1.8" marker-end="url(#arrowRed)"/>
 
-              <!-- "Healthspan Ageing →" label — same y as Lifespan, same arrow offset/delta as black -->
+              <!-- "Healthspan Ageing" label -->
               <text x="475" y="205" fill="#00a878" font-size="12.5" font-family="Poppins, sans-serif" font-weight="600">Healthspan</text>
               <text x="475" y="221" fill="#00a878" font-size="12.5" font-family="Poppins, sans-serif" font-weight="600">Ageing</text>
               <line x1="550" y1="213" x2="584" y2="185" stroke="#00a878" stroke-width="1.8" marker-end="url(#arrowGreen)"/>
-
-              <!-- Attribution -->
-              <text x="330" y="387" text-anchor="middle" fill="#555" font-size="11" font-family="Inter, sans-serif">
-                <tspan font-weight="700">Adapted from Attia, Peter. MD, (2023) </tspan><tspan font-style="italic" font-weight="700">Outlive The Science &amp; Art Of Longevity,</tspan><tspan font-weight="700"> Harmony</tspan>
-              </text>
 
             </svg>
             <p class="hs-chart-note">{{ healthspan_section.chart_note }}</p>
@@ -351,7 +346,7 @@
         <p class="section-sub">{{ objectives.subtext }}</p>
       </div>
 
-      {% set obj_icons = ["#i-zap","#i-target","#i-dumbbell","#i-plus-circle","#i-moon","#i-bar-chart","#i-brain","#i-heart"] %}
+      {% set obj_icons = ["#i-zap","#i-target","#i-dumbbell","#i-heart","#i-stretch","#i-moon","#i-bar-chart","#i-brain","#i-plus-circle"] %}
       <div class="objectives-grid" id="objectivesGrid">
         {% for card in objectives.cards %}
         <button class="objective-card" onclick="selectObjective(this)">
