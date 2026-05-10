@@ -72,3 +72,191 @@ collections:
             fields:
               - { label: "Number / Stat", name: "num", widget: "string" }
               - { label: "Description", name: "text", widget: "string" }
+
+  - name: "empathy"
+    label: "Problem / Empathy Section"
+    files:
+      - label: "Empathy Content"
+        name: "empathy"
+        file: "src/_data/empathy.json"
+        fields:
+          - { label: "Heading", name: "heading", widget: "string" }
+          - { label: "Paragraph 1", name: "paragraph1", widget: "text" }
+          - { label: "Paragraph 2", name: "paragraph2", widget: "text" }
+          - label: "Pain Cards"
+            name: "pain_cards"
+            widget: "list"
+            field: { label: "Card Text", name: "item", widget: "string" }
+
+  - name: "healthspan_section"
+    label: "What is Healthspan Section"
+    files:
+      - label: "Healthspan Content"
+        name: "healthspan_section"
+        file: "src/_data/healthspan_section.json"
+        fields:
+          - { label: "Section Tag", name: "section_tag", widget: "string" }
+          - { label: "Heading", name: "heading", widget: "string" }
+          - { label: "Lead Paragraph", name: "lead", widget: "text" }
+          - { label: "Paragraph 1", name: "paragraph1", widget: "text" }
+          - { label: "Paragraph 2", name: "paragraph2", widget: "text" }
+          - { label: "Paragraph 3", name: "paragraph3", widget: "text" }
+          - { label: "Chart Note", name: "chart_note", widget: "text" }
+          - { label: "CTA Button Text", name: "cta_text", widget: "string" }
+
+  - name: "what_affects"
+    label: "What Shapes Your Healthspan Section"
+    files:
+      - label: "What Affects Content"
+        name: "what_affects"
+        file: "src/_data/what_affects.json"
+        fields:
+          - { label: "Section Tag", name: "section_tag", widget: "string" }
+          - { label: "Heading", name: "heading", widget: "string" }
+          - { label: "Subtext", name: "subtext", widget: "text" }
+          - label: "Cards"
+            name: "cards"
+            widget: "list"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Body", name: "body", widget: "text" }
+
+  - name: "objectives"
+    label: "Your Objectives Section"
+    files:
+      - label: "Objectives Content"
+        name: "objectives"
+        file: "src/_data/objectives.json"
+        fields:
+          - { label: "Section Tag", name: "section_tag", widget: "string" }
+          - { label: "Heading", name: "heading", widget: "string" }
+          - { label: "Subtext", name: "subtext", widget: "text" }
+          - label: "Objective Cards"
+            name: "cards"
+            widget: "list"
+            field: { label: "Objective", name: "item", widget: "string" }
+          - { label: "Selected CTA Text", name: "selected_cta", widget: "string" }
+          - { label: "Unsure Text", name: "unsure_text", widget: "text" }
+
+  - name: "services"
+    label: "Services Section"
+    files:
+      - label: "Services Content"
+        name: "services"
+        file: "src/_data/services.json"
+        fields:
+          - { label: "Section Tag", name: "section_tag", widget: "string" }
+          - { label: "Heading", name: "heading", widget: "string" }
+          - { label: "Subtext", name: "subtext", widget: "text" }
+          - { label: "Divider Text", name: "divider_text", widget: "string" }
+          - label: "Three Dimensions"
+            name: "dimensions"
+            widget: "list"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Body", name: "body", widget: "text" }
+          - label: "Services"
+            name: "services"
+            widget: "list"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Body", name: "body", widget: "text" }
+
+  - name: "how_we_work"
+    label: "How We Work Together Section"
+    files:
+      - label: "How We Work Content"
+        name: "how_we_work"
+        file: "src/_data/how_we_work.json"
+        fields:
+          - { label: "Section Tag", name: "section_tag", widget: "string" }
+          - { label: "Heading", name: "heading", widget: "string" }
+          - { label: "Subtext", name: "subtext", widget: "text" }
+          - label: "Steps"
+            name: "steps"
+            widget: "list"
+            fields:
+              - { label: "Number", name: "num", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Body", name: "body", widget: "text" }
+          - { label: "Quote", name: "quote", widget: "text" }
+          - { label: "Quote Attribution", name: "quote_attr", widget: "string" }
+
+  - name: "personalisation"
+    label: "Personalisation Section"
+    files:
+      - label: "Personalisation Content"
+        name: "personalisation"
+        file: "src/_data/personalisation.json"
+        fields:
+          - { label: "Section Tag", name: "section_tag", widget: "string" }
+          - { label: "Heading", name: "heading", widget: "string" }
+          - { label: "Subtext", name: "subtext", widget: "text" }
+          - label: "Cards"
+            name: "cards"
+            widget: "list"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Paragraph 1", name: "paragraph1", widget: "text" }
+              - { label: "Paragraph 2", name: "paragraph2", widget: "text" }
+              - label: "List Items"
+                name: "list_items"
+                widget: "list"
+                field: { label: "Item", name: "item", widget: "string" }
+
+  - name: "about"
+    label: "About & Mission Section"
+    files:
+      - label: "About Content"
+        name: "about"
+        file: "src/_data/about.json"
+        fields:
+          - { label: "Section Tag", name: "section_tag", widget: "string" }
+          - { label: "Heading", name: "heading", widget: "string" }
+          - { label: "Paragraph 1", name: "paragraph1", widget: "text" }
+          - { label: "Paragraph 2", name: "paragraph2", widget: "text" }
+          - { label: "Paragraph 3", name: "paragraph3", widget: "text" }
+          - label: "Values List"
+            name: "values"
+            widget: "list"
+            field: { label: "Value", name: "item", widget: "string" }
+          - { label: "Stat Number", name: "stat_num", widget: "string" }
+          - { label: "Stat Label", name: "stat_label", widget: "string" }
+          - { label: "CTA Button Text", name: "cta_text", widget: "string" }
+
+  - name: "glossary"
+    label: "Plain Language Glossary"
+    files:
+      - label: "Glossary Content"
+        name: "glossary"
+        file: "src/_data/glossary.json"
+        fields:
+          - { label: "Section Tag", name: "section_tag", widget: "string" }
+          - { label: "Heading", name: "heading", widget: "string" }
+          - { label: "Subtext", name: "subtext", widget: "text" }
+          - { label: "Note", name: "note", widget: "text" }
+          - label: "Glossary Items"
+            name: "items"
+            widget: "list"
+            fields:
+              - { label: "Term", name: "term", widget: "string" }
+              - { label: "Definition", name: "definition", widget: "text" }
+
+  - name: "cta"
+    label: "Book a Conversation (CTA Section)"
+    files:
+      - label: "CTA Content"
+        name: "cta"
+        file: "src/_data/cta.json"
+        fields:
+          - { label: "Badge Text", name: "badge", widget: "string" }
+          - { label: "Heading", name: "heading", widget: "string" }
+          - { label: "Subtext", name: "subtext", widget: "text" }
+          - { label: "Button Text", name: "button_text", widget: "string" }
+          - { label: "Disclaimer", name: "disclaimer", widget: "string" }
+          - { label: "Success Heading", name: "success_heading", widget: "string" }
+          - { label: "Success Body", name: "success_body", widget: "text" }
+          - label: "Form Dropdown Options"
+            name: "form_options"
+            widget: "list"
+            field: { label: "Option", name: "item", widget: "string" }

@@ -229,27 +229,18 @@
   <section class="empathy">
     <div class="container empathy-inner">
       <div class="empathy-text">
-        <h2>After 50, the old ways stop working as well as they used to.</h2>
-        <p>You've spent decades building a career, a family, a life. But somewhere along the way, the energy dipped, the weight crept up, the joints started complaining. And the generic advice online? It's written for someone else entirely.</p>
-        <p>You don't need more information. You need the right support: people who understand the biology of ageing, the reality of a full life, and what it genuinely takes to feel well past 50.</p>
+        <h2>{{ empathy.heading }}</h2>
+        <p>{{ empathy.paragraph1 }}</p>
+        <p>{{ empathy.paragraph2 }}</p>
       </div>
       <div class="empathy-cards">
+        {% set pain_icons = ["#i-zap","#i-target","#i-plus-circle","#i-moon"] %}
+        {% for card in empathy.pain_cards %}
         <div class="pain-card">
-          <div class="pain-icon"><svg class="ico" aria-hidden="true"><use href="#i-zap"/></svg></div>
-          <p>Energy and vitality that aren't what they used to be</p>
+          <div class="pain-icon"><svg class="ico" aria-hidden="true"><use href="{{ pain_icons[loop.index0] }}"/></svg></div>
+          <p>{{ card }}</p>
         </div>
-        <div class="pain-card">
-          <div class="pain-icon"><svg class="ico" aria-hidden="true"><use href="#i-target"/></svg></div>
-          <p>Weight that won't shift despite your best efforts</p>
-        </div>
-        <div class="pain-card">
-          <div class="pain-icon"><svg class="ico" aria-hidden="true"><use href="#i-plus-circle"/></svg></div>
-          <p>Pain or injury that keeps getting in the way</p>
-        </div>
-        <div class="pain-card">
-          <div class="pain-icon"><svg class="ico" aria-hidden="true"><use href="#i-moon"/></svg></div>
-          <p>Poor sleep, brain fog, or a sense that something's off</p>
-        </div>
+        {% endfor %}
       </div>
     </div>
   </section>
@@ -313,17 +304,17 @@
               </text>
 
             </svg>
-            <p class="hs-chart-note">The green curve shows "compression of morbidity" — staying at full health longer, then a sharper, shorter decline. That's the goal: not just a longer life, but more years lived well.</p>
+            <p class="hs-chart-note">{{ healthspan_section.chart_note }}</p>
           </div>
         </div>
         <div class="healthspan-text">
-          <div class="section-tag">Understanding the Basics</div>
-          <h2>What is Healthspan?</h2>
-          <p class="healthspan-lead">Most of us know the word <em>lifespan</em>, meaning how long we live. But there's another number that matters just as much, and most people have never heard of it.</p>
-          <p><strong>Healthspan</strong> is how many of those years you spend in genuinely good health: with the energy, physical capability, mental sharpness, and emotional wellbeing to fully enjoy your life.</p>
-          <p>The average person today spends 10 to 15 years of their life in a state of meaningful decline before they die. The question we ask isn't just "how long will you live?" but "how <em>well</em> will you live, and for how long?"</p>
-          <p>At Healthspan.Asia, everything we do is in service of one goal: extending the years in which you feel strong, clear, and fully yourself.</p>
-          <a href="#what-affects" class="btn btn-secondary">What affects your healthspan? →</a>
+          <div class="section-tag">{{ healthspan_section.section_tag }}</div>
+          <h2>{{ healthspan_section.heading }}</h2>
+          <p class="healthspan-lead">{{ healthspan_section.lead }}</p>
+          <p><strong>Healthspan</strong> {{ healthspan_section.paragraph1 }}</p>
+          <p>{{ healthspan_section.paragraph2 }}</p>
+          <p>{{ healthspan_section.paragraph3 }}</p>
+          <a href="#what-affects" class="btn btn-secondary">{{ healthspan_section.cta_text }}</a>
         </div>
       </div>
     </div>
@@ -334,61 +325,19 @@
   <section class="what-affects" id="what-affects">
     <div class="container">
       <div class="section-header">
-        <div class="section-tag">The Factors at Play</div>
-        <h2>What Shapes Your Healthspan?</h2>
-        <p class="section-sub">Your healthspan isn't fixed. It's shaped by a complex web of factors, some inherited and most influenced by how you live. Understanding them is the first step to changing them.</p>
+        <div class="section-tag">{{ what_affects.section_tag }}</div>
+        <h2>{{ what_affects.heading }}</h2>
+        <p class="section-sub">{{ what_affects.subtext }}</p>
       </div>
+      {% set affects_icons = ["#i-dna","#i-hourglass","#i-person","#i-flame","#i-moon","#i-leaf","#i-activity","#i-brain","#i-sun","#i-stethoscope"] %}
       <div class="affects-grid">
+        {% for card in what_affects.cards %}
         <div class="affect-card">
-          <div class="affect-icon"><svg class="ico" aria-hidden="true"><use href="#i-dna"/></svg></div>
-          <h3>Genotype vs Phenotype</h3>
-          <p>Your genes are your starting point, not your destiny. Genotype is what you're born with. Phenotype is how those genes express themselves based on your environment and choices. We can't change your DNA, but we can change almost everything else.</p>
+          <div class="affect-icon"><svg class="ico" aria-hidden="true"><use href="{{ affects_icons[loop.index0] }}"/></svg></div>
+          <h3>{{ card.title }}</h3>
+          <p>{{ card.body }}</p>
         </div>
-        <div class="affect-card">
-          <div class="affect-icon"><svg class="ico" aria-hidden="true"><use href="#i-hourglass"/></svg></div>
-          <h3>Age</h3>
-          <p>Biological ageing is real and measurable, but it's not a straight line. The rate at which you age is highly variable, and the right interventions at the right time can slow it meaningfully. Many of our members find their biological age is younger than their chronological age after working with us.</p>
-        </div>
-        <div class="affect-card">
-          <div class="affect-icon"><svg class="ico" aria-hidden="true"><use href="#i-person"/></svg></div>
-          <h3>Sex</h3>
-          <p>Men and women age differently, each with their own hormonal shifts, cardiovascular risk patterns, and bone density changes that require specific, tailored attention. Our work accounts for your biology as it actually is.</p>
-        </div>
-        <div class="affect-card">
-          <div class="affect-icon"><svg class="ico" aria-hidden="true"><use href="#i-flame"/></svg></div>
-          <h3>Oxidation & Metabolic Rate</h3>
-          <p>Oxidative stress, the wear and tear of living, is one of the primary drivers of ageing at a cellular level. How efficiently your body produces and uses energy, and how well it manages oxidative damage, matters enormously for how you feel and function.</p>
-        </div>
-        <div class="affect-card">
-          <div class="affect-icon"><svg class="ico" aria-hidden="true"><use href="#i-moon"/></svg></div>
-          <h3>Sleep</h3>
-          <p>Sleep is not downtime. It's when your body does its most important repair work. Poor sleep accelerates almost every aspect of biological ageing, from cognitive decline to metabolic dysfunction. It's one of the most powerful levers we have.</p>
-        </div>
-        <div class="affect-card">
-          <div class="affect-icon"><svg class="ico" aria-hidden="true"><use href="#i-leaf"/></svg></div>
-          <h3>Nutrition</h3>
-          <p>What you eat, and how and when you eat it, shapes your cellular environment every single day. There's no universal diet, but there are principles grounded in good science that we tailor precisely to your biology and your life.</p>
-        </div>
-        <div class="affect-card">
-          <div class="affect-icon"><svg class="ico" aria-hidden="true"><use href="#i-activity"/></svg></div>
-          <h3>Exercise & Activity</h3>
-          <p>Movement is medicine, and the evidence is overwhelming. The right kinds of exercise, calibrated to where you are and where you want to go, can extend both lifespan and healthspan more than almost any other intervention we know of.</p>
-        </div>
-        <div class="affect-card">
-          <div class="affect-icon"><svg class="ico" aria-hidden="true"><use href="#i-brain"/></svg></div>
-          <h3>State of Mind</h3>
-          <p>How you feel emotionally has direct, measurable effects on your physical health: your immune function, hormonal balance, cardiovascular health, and rate of ageing. Wellbeing isn't a soft concept; it's a biological reality.</p>
-        </div>
-        <div class="affect-card">
-          <div class="affect-icon"><svg class="ico" aria-hidden="true"><use href="#i-sun"/></svg></div>
-          <h3>Lifestyle</h3>
-          <p>The accumulation of daily habits, from how you manage stress to the relationships you maintain and the environments you inhabit, collectively shapes your healthspan perhaps more than any single factor.</p>
-        </div>
-        <div class="affect-card">
-          <div class="affect-icon"><svg class="ico" aria-hidden="true"><use href="#i-stethoscope"/></svg></div>
-          <h3>Your Medical History</h3>
-          <p>Existing conditions, past injuries, medications, and family health history all play a role. We work alongside your doctors, not around them, to ensure your health plan accounts for the full picture of who you are medically.</p>
-        </div>
+        {% endfor %}
       </div>
     </div>
   </section>
@@ -397,53 +346,28 @@
   <section class="objectives" id="objectives">
     <div class="container">
       <div class="section-header">
-        <div class="section-tag">Where Do You Want to Go?</div>
-        <h2>What do you want from<br />our work together?</h2>
-        <p class="section-sub">There's no wrong answer. Some people arrive knowing exactly what they want. Others feel that something needs to change but aren't sure what. Both are a perfectly good place to start.</p>
+        <div class="section-tag">{{ objectives.section_tag }}</div>
+        <h2>{{ objectives.heading }}</h2>
+        <p class="section-sub">{{ objectives.subtext }}</p>
       </div>
 
+      {% set obj_icons = ["#i-zap","#i-target","#i-dumbbell","#i-plus-circle","#i-moon","#i-bar-chart","#i-brain","#i-heart"] %}
       <div class="objectives-grid" id="objectivesGrid">
+        {% for card in objectives.cards %}
         <button class="objective-card" onclick="selectObjective(this)">
-          <div class="obj-icon"><svg class="ico" aria-hidden="true"><use href="#i-zap"/></svg></div>
-          <h4>Feel more energetic and vital, day to day</h4>
+          <div class="obj-icon"><svg class="ico" aria-hidden="true"><use href="{{ obj_icons[loop.index0] }}"/></svg></div>
+          <h4>{{ card }}</h4>
         </button>
-        <button class="objective-card" onclick="selectObjective(this)">
-          <div class="obj-icon"><svg class="ico" aria-hidden="true"><use href="#i-target"/></svg></div>
-          <h4>Reach a healthy weight and body composition</h4>
-        </button>
-        <button class="objective-card" onclick="selectObjective(this)">
-          <div class="obj-icon"><svg class="ico" aria-hidden="true"><use href="#i-dumbbell"/></svg></div>
-          <h4>Get stronger and more physically capable</h4>
-        </button>
-        <button class="objective-card" onclick="selectObjective(this)">
-          <div class="obj-icon"><svg class="ico" aria-hidden="true"><use href="#i-plus-circle"/></svg></div>
-          <h4>Recover from pain, injury, or a chronic issue</h4>
-        </button>
-        <button class="objective-card" onclick="selectObjective(this)">
-          <div class="obj-icon"><svg class="ico" aria-hidden="true"><use href="#i-moon"/></svg></div>
-          <h4>Sleep better and wake up actually rested</h4>
-        </button>
-        <button class="objective-card" onclick="selectObjective(this)">
-          <div class="obj-icon"><svg class="ico" aria-hidden="true"><use href="#i-bar-chart"/></svg></div>
-          <h4>Understand and improve my health markers</h4>
-        </button>
-        <button class="objective-card" onclick="selectObjective(this)">
-          <div class="obj-icon"><svg class="ico" aria-hidden="true"><use href="#i-brain"/></svg></div>
-          <h4>Sharper thinking and better emotional balance</h4>
-        </button>
-        <button class="objective-card" onclick="selectObjective(this)">
-          <div class="obj-icon"><svg class="ico" aria-hidden="true"><use href="#i-heart"/></svg></div>
-          <h4>Reduce my risk of serious illness in the future</h4>
-        </button>
+        {% endfor %}
       </div>
 
       <div class="objectives-footer">
         <div class="objectives-cta" id="objectivesCta" style="display:none;">
-          <p>Good. We'd love to talk about those goals with you.</p>
+          <p>{{ objectives.selected_cta }}</p>
           <a href="#consult" class="btn btn-primary">Let's begin →</a>
         </div>
         <div class="objectives-unsure">
-          <p>Not sure what you're looking for yet? That's completely fine. Our short questionnaire can help you think it through.</p>
+          <p>{{ objectives.unsure_text }}</p>
           <a href="#" class="btn btn-outline">Take the questionnaire →</a>
         </div>
       </div>
@@ -454,77 +378,38 @@
   <section class="services" id="services">
     <div class="container">
       <div class="section-header">
-        <div class="section-tag">Our Approach</div>
-        <h2>Health Coaching Across<br />Three Dimensions of You</h2>
-        <p class="section-sub">Good health isn't just physical. We work with all of who you are: body, mind, and spirit, because all three are connected, and all three matter for how well you live.</p>
+        <div class="section-tag">{{ services.section_tag }}</div>
+        <h2>{{ services.heading }}</h2>
+        <p class="section-sub">{{ services.subtext }}</p>
       </div>
 
+      {% set dim_icons = ["#i-activity","#i-brain","#i-sun"] %}
       <div class="dimensions-row">
+        {% for dim in services.dimensions %}
         <div class="dimension-card">
-          <div class="dim-icon"><svg class="ico" aria-hidden="true"><use href="#i-activity"/></svg></div>
-          <h3>Physical</h3>
-          <p>How your body moves, functions, and recovers. Strength, fitness, weight, pain, sleep, nutrition, hormones: the tangible, measurable foundation of your health.</p>
+          <div class="dim-icon"><svg class="ico" aria-hidden="true"><use href="{{ dim_icons[loop.index0] }}"/></svg></div>
+          <h3>{{ dim.title }}</h3>
+          <p>{{ dim.body }}</p>
         </div>
-        <div class="dimension-card">
-          <div class="dim-icon"><svg class="ico" aria-hidden="true"><use href="#i-brain"/></svg></div>
-          <h3>Mental & Emotional</h3>
-          <p>How you think, feel, and respond to the world. Cognitive sharpness, stress management, emotional resilience, and the relationship between your inner life and your physical health.</p>
-        </div>
-        <div class="dimension-card">
-          <div class="dim-icon"><svg class="ico" aria-hidden="true"><use href="#i-sun"/></svg></div>
-          <h3>Spiritual</h3>
-          <p>Meaning, purpose, and connection. Not religious unless you want it to be, but the deeper sense of what makes life feel worthwhile, and why that belongs in a health conversation.</p>
-        </div>
+        {% endfor %}
       </div>
 
       <div class="services-divider">
-        <span>The specific services we provide</span>
+        <span>{{ services.divider_text }}</span>
       </div>
 
+      {% set svc_icons = ["#i-dumbbell","#i-leaf","#i-moon","#i-stretch","#i-heart","#i-brain","#i-plus-circle","#i-stethoscope"] %}
       <div class="services-carousel-outer">
         <div class="services-carousel-wrap" id="servicesWrap">
           <div class="services-grid-track" id="servicesTrack">
 
+            {% for svc in services.services %}
             <div class="service-card">
-              <div class="service-icon"><svg class="ico" aria-hidden="true"><use href="#i-dumbbell"/></svg></div>
-              <h3>Strength, Conditioning & Cardio</h3>
-              <p>Training built specifically for the 50+ body, not adapted from something designed for 30-year-olds. We build strength, protect your joints, improve your cardiovascular health, and keep you moving well for years to come.</p>
+              <div class="service-icon"><svg class="ico" aria-hidden="true"><use href="{{ svc_icons[loop.index0] }}"/></svg></div>
+              <h3>{{ svc.title }}</h3>
+              <p>{{ svc.body }}</p>
             </div>
-            <div class="service-card">
-              <div class="service-icon"><svg class="ico" aria-hidden="true"><use href="#i-leaf"/></svg></div>
-              <h3>Nutritional Advice & Support</h3>
-              <p>Evidence-based guidance tailored to your bloodwork, goals, and the reality of your life. No extreme diets. No one-size-fits-all rules. Just the food habits that actually work for your biology.</p>
-            </div>
-            <div class="service-card">
-              <div class="service-icon"><svg class="ico" aria-hidden="true"><use href="#i-moon"/></svg></div>
-              <h3>Sleep Advice & Support</h3>
-              <p>Sleep is the foundation everything else rests on. We assess what's getting in the way, and build practical, sustainable changes to help you sleep more deeply and wake up restored.</p>
-            </div>
-            <div class="service-card">
-              <div class="service-icon"><svg class="ico" aria-hidden="true"><use href="#i-stretch"/></svg></div>
-              <h3>Mobility & Flexibility</h3>
-              <p>Moving freely, without pain, stiffness, or limitation, is one of the great quiet joys of a healthy body. We work on mobility and flexibility as a core part of your programme, not an afterthought.</p>
-            </div>
-            <div class="service-card">
-              <div class="service-icon"><svg class="ico" aria-hidden="true"><use href="#i-heart"/></svg></div>
-              <h3>Sexuality Advice & Support</h3>
-              <p>An often-ignored part of health after 50, and one that matters enormously for quality of life. We create a safe, private space to talk honestly about sexual health, libido, intimacy, and what can help.</p>
-            </div>
-            <div class="service-card">
-              <div class="service-icon"><svg class="ico" aria-hidden="true"><use href="#i-brain"/></svg></div>
-              <h3>State of Mind & Its Management</h3>
-              <p>Stress, anxiety, low mood, and the mental weight of a busy life all have real physical consequences. We explore what's contributing, and what changes in thinking, habit, and lifestyle might meaningfully shift things.</p>
-            </div>
-            <div class="service-card">
-              <div class="service-icon"><svg class="ico" aria-hidden="true"><use href="#i-plus-circle"/></svg></div>
-              <h3>Physiotherapy & Injury Care</h3>
-              <p>Rehabilitation, chronic pain management, and postural correction from specialists who understand the ageing body. We treat what's hurting now and prevent what might hurt next.</p>
-            </div>
-            <div class="service-card">
-              <div class="service-icon"><svg class="ico" aria-hidden="true"><use href="#i-stethoscope"/></svg></div>
-              <h3>Medical Coordination</h3>
-              <p>Access to our vetted network of doctors and specialists, with a concierge who briefs them, follows up on results, and makes sure nothing falls through the cracks of a fragmented healthcare system.</p>
-            </div>
+            {% endfor %}
 
           </div>
         </div>
@@ -546,41 +431,23 @@
     <div class="nature-wave-top"></div>
     <div class="container">
       <div class="section-header">
-        <div class="section-tag">How We Work Together</div>
-        <h2>A Relationship, Not a Programme</h2>
-        <p class="section-sub">We don't hand you a plan and leave you to it. We walk alongside you, adjusting and responding to what your body and life actually need.</p>
+        <div class="section-tag">{{ how_we_work.section_tag }}</div>
+        <h2>{{ how_we_work.heading }}</h2>
+        <p class="section-sub">{{ how_we_work.subtext }}</p>
       </div>
 
       <div class="how-grid">
+        {% for step in how_we_work.steps %}
         <div class="how-card">
-          <div class="how-num">01</div>
-          <h3>A Conversation, Not a Consultation</h3>
-          <p>We start with a genuine conversation, unhurried, open, and curious. We want to understand not just your health history, but your life: your work, your relationships, your fears, your hopes. This is where we get to know you as a whole person.</p>
+          <div class="how-num">{{ step.num }}</div>
+          <h3>{{ step.title }}</h3>
+          <p>{{ step.body }}</p>
         </div>
-        <div class="how-card">
-          <div class="how-num">02</div>
-          <h3>Building Your Health Picture</h3>
-          <p>Comprehensive bloodwork, body composition, movement assessment, sleep quality, and lifestyle audit. We gather the data we need to understand where you actually are, not where you assume you are.</p>
-        </div>
-        <div class="how-card">
-          <div class="how-num">03</div>
-          <h3>Your Personal Health Blueprint</h3>
-          <p>Based on everything we've learned, we put together a clear, integrated plan. Not a collection of separate recommendations from separate providers. One coherent plan, held together by your dedicated concierge.</p>
-        </div>
-        <div class="how-card">
-          <div class="how-num">04</div>
-          <h3>Bringing in the Right Specialists</h3>
-          <p>Depending on what you need, we bring in specialists from our network: physiotherapists, doctors, psychologists, sleep experts. We brief them fully, coordinate their work, and ensure they're all pulling in the same direction.</p>
-        </div>
-        <div class="how-card">
-          <div class="how-num">05</div>
-          <h3>An Ongoing, Evolving Partnership</h3>
-          <p>Health isn't a destination. It's a practice. We review your progress regularly, re-test your biomarkers quarterly, and adapt your plan as your life changes. Your concierge is always available when you need them.</p>
-        </div>
+        {% endfor %}
         <div class="how-card how-card-quote">
           <div class="how-quote-mark">"</div>
-          <p class="how-quote-text">The goal isn't to fix you. You're not broken. It's to help you become the healthiest, most vital version of yourself. That looks different for everyone, and we never forget it.</p>
-          <span class="how-quote-attr">Healthspan.Asia philosophy</span>
+          <p class="how-quote-text">{{ how_we_work.quote }}</p>
+          <span class="how-quote-attr">{{ how_we_work.quote_attr }}</span>
         </div>
       </div>
     </div>
@@ -591,51 +458,26 @@
   <section class="personalisation" id="personalisation">
     <div class="container">
       <div class="section-header">
-        <div class="section-tag">Tailored to You</div>
-        <h2>No Two People Are the Same.<br />Neither Are Their Plans.</h2>
-        <p class="section-sub">Generic health advice produces generic results. Everything we do is personalised to your biology, your life, and what matters to you.</p>
+        <div class="section-tag">{{ personalisation.section_tag }}</div>
+        <h2>{{ personalisation.heading }}</h2>
+        <p class="section-sub">{{ personalisation.subtext }}</p>
       </div>
 
+      {% set personal_icons = ["#i-flask","#i-pencil","#i-trending"] %}
       <div class="personal-cards">
-        <div class="personal-card">
-          <div class="personal-icon"><svg class="ico" aria-hidden="true"><use href="#i-flask"/></svg></div>
-          <h3>The Science Part</h3>
-          <p>We start with data. Comprehensive biomarker testing, covering bloodwork, hormonal panels, metabolic markers, cardiovascular risk and inflammatory load, gives us an objective picture of what's happening inside your body.</p>
-          <p>Over time, we track how these numbers move in response to changes in your lifestyle, training, and nutrition. This turns guesswork into evidence, and progress into something you can see.</p>
+        {% for card in personalisation.cards %}
+        <div class="personal-card{% if loop.index == 2 %} personal-card-featured{% endif %}">
+          <div class="personal-icon"><svg class="ico" aria-hidden="true"><use href="{{ personal_icons[loop.index0] }}"/></svg></div>
+          <h3>{{ card.title }}</h3>
+          <p>{{ card.paragraph1 }}</p>
+          <p>{{ card.paragraph2 }}</p>
           <ul class="personal-list">
-            <li>Full bloodwork and hormonal panel</li>
-            <li>Body composition and metabolic rate</li>
-            <li>HRV and sleep quality measurement</li>
-            <li>Biological age assessment</li>
-            <li>Quarterly retesting to track progress</li>
+            {% for item in card.list_items %}
+            <li>{{ item }}</li>
+            {% endfor %}
           </ul>
         </div>
-        <div class="personal-card personal-card-featured">
-          <div class="personal-icon"><svg class="ico" aria-hidden="true"><use href="#i-pencil"/></svg></div>
-          <h3>The Art Part</h3>
-          <p>Data tells us a lot, but it doesn't tell us everything. The art of what we do is the human part: listening carefully, reading between the lines, understanding what motivates you, what holds you back, and what kind of support actually helps you change.</p>
-          <p>Your health concierge gets to know you over time. They notice patterns. They ask the questions that open things up. They know when to push and when to be gentle. No algorithm does this.</p>
-          <ul class="personal-list">
-            <li>Deep listening and human understanding</li>
-            <li>Motivational style and pacing matched to you</li>
-            <li>Cultural and lifestyle sensitivity</li>
-            <li>Honest, kind feedback when it's needed</li>
-            <li>A safe space to be frank about what's hard</li>
-          </ul>
-        </div>
-        <div class="personal-card">
-          <div class="personal-icon"><svg class="ico" aria-hidden="true"><use href="#i-trending"/></svg></div>
-          <h3>Tracking Progress & Adjusting</h3>
-          <p>We review your progress regularly, looking not just at the numbers but at how you feel, what's changed, and what hasn't. Where things aren't working, we adjust. Where they are, we build on them.</p>
-          <p>Nothing about your plan is set in stone. Life changes. Your body changes. Your goals may evolve. We stay curious and responsive throughout.</p>
-          <ul class="personal-list">
-            <li>Monthly check-ins with your concierge</li>
-            <li>Quarterly biomarker retesting</li>
-            <li>Plan adjustments based on real progress</li>
-            <li>Subjective wellbeing tracked alongside data</li>
-            <li>Long-term health trajectory review</li>
-          </ul>
-        </div>
+        {% endfor %}
       </div>
     </div>
   </section>
@@ -658,23 +500,22 @@
           </div>
         </div>
         <div class="about-stat-card">
-          <span class="about-stat-num">50+</span>
-          <span class="about-stat-label">Average age of our members when they start</span>
+          <span class="about-stat-num">{{ about.stat_num }}</span>
+          <span class="about-stat-label">{{ about.stat_label }}</span>
         </div>
       </div>
       <div class="about-text">
-        <div class="section-tag">About & Mission</div>
-        <h2>We Exist Because People Deserve Better After 50</h2>
-        <p>We bring together the latest, most vital Healthspan knowledge and tailor it to your individual needs: your biology, your medical history, and your lifestyle. Then we combine that into practical programmes and connect you to the support you need to implement them.</p>
-        <p>That's how we partner with you to maximise your Healthspan, so you can <em>Live Better. For Longer.</em></p>
-        <p>Most people over 50 are falling through a gap between "not sick enough to see a doctor" and "genuinely thriving." We were created to close that gap by bringing together the right people, the right knowledge, and the right kind of care, in a way that fits the reality of a full, busy life.</p>
+        <div class="section-tag">{{ about.section_tag }}</div>
+        <h2>{{ about.heading }}</h2>
+        <p>{{ about.paragraph1 }}</p>
+        <p>{{ about.paragraph2 }}</p>
+        <p>{{ about.paragraph3 }}</p>
         <div class="about-values">
-          <div class="value-item"><span class="value-check">✓</span> Evidence-based, not trend-based</div>
-          <div class="value-item"><span class="value-check">✓</span> Whole-person, not symptom-focused</div>
-          <div class="value-item"><span class="value-check">✓</span> Proactive, not reactive</div>
-          <div class="value-item"><span class="value-check">✓</span> Built exclusively for adults 50+</div>
+          {% for value in about.values %}
+          <div class="value-item"><span class="value-check">✓</span> {{ value }}</div>
+          {% endfor %}
         </div>
-        <a href="#consult" class="btn btn-primary">Begin Your Journey</a>
+        <a href="#consult" class="btn btn-primary">{{ about.cta_text }}</a>
       </div>
     </div>
   </section>
@@ -732,118 +573,28 @@
   <section class="glossary" id="glossary">
     <div class="container">
       <div class="section-header">
-        <div class="section-tag">Demystification List</div>
-        <h2>We Believe in Plain Language</h2>
-        <p class="section-sub">Health and longevity science comes with a lot of vocabulary. You deserve to understand it in plain, clear terms, without needing a medical degree.</p>
+        <div class="section-tag">{{ glossary.section_tag }}</div>
+        <h2>{{ glossary.heading }}</h2>
+        <p class="section-sub">{{ glossary.subtext }}</p>
       </div>
       <div class="glossary-note">
         <span class="glossary-note-icon">
           <svg class="ico" aria-hidden="true"><use href="#i-book"/></svg>
         </span>
-        <p>This glossary is growing. We add new entries regularly as we learn what our members find confusing or want to understand better. If there's something you'd like us to explain, just ask.</p>
+        <p>{{ glossary.note }}</p>
       </div>
       <div class="glossary-list" id="glossaryList">
-
+        {% for item in glossary.items %}
         <div class="glossary-item">
           <button class="glossary-term" onclick="toggleGlossary(this)">
-            Healthspan vs Lifespan
+            {{ item.term }}
             <span class="glossary-arrow">▼</span>
           </button>
           <div class="glossary-def">
-            <p><strong>Lifespan</strong> is simply how long you live, the total number of years from birth to death. <strong>Healthspan</strong> is how many of those years you spend in good health: physically capable, mentally sharp, and emotionally well. The gap between them, the years of meaningful decline, is what we work to compress. Most people today have a healthspan that ends 10 to 15 years before their lifespan does.</p>
+            <p>{{ item.definition }}</p>
           </div>
         </div>
-
-        <div class="glossary-item">
-          <button class="glossary-term" onclick="toggleGlossary(this)">
-            VO₂ Max
-            <span class="glossary-arrow">▼</span>
-          </button>
-          <div class="glossary-def">
-            <p>VO₂ max is a measure of how efficiently your body uses oxygen during exercise, which is essentially your aerobic capacity. It's one of the single strongest predictors of long-term health and longevity we have. The good news: it's highly trainable, even in your 50s, 60s, and beyond. Improving it is one of the most impactful things you can do for your healthspan.</p>
-          </div>
-        </div>
-
-        <div class="glossary-item">
-          <button class="glossary-term" onclick="toggleGlossary(this)">
-            HRV: Heart Rate Variability
-            <span class="glossary-arrow">▼</span>
-          </button>
-          <div class="glossary-def">
-            <p>HRV is the natural variation in time between your heartbeats. It might sound like a technical measurement, but it's actually a beautifully sensitive indicator of how your nervous system is coping with stress, training load, and sleep quality. Higher HRV generally means your body is recovering well and has good adaptive capacity. We track it regularly.</p>
-          </div>
-        </div>
-
-        <div class="glossary-item">
-          <button class="glossary-term" onclick="toggleGlossary(this)">
-            Metabolic Health
-            <span class="glossary-arrow">▼</span>
-          </button>
-          <div class="glossary-def">
-            <p>Your metabolic health is essentially how well your body processes and uses energy. It's measured through things like blood sugar control, insulin sensitivity, blood pressure, waist circumference, and triglyceride levels. Poor metabolic health is one of the biggest drivers of disease and accelerated ageing, and it's one of the most responsive to lifestyle change.</p>
-          </div>
-        </div>
-
-        <div class="glossary-item">
-          <button class="glossary-term" onclick="toggleGlossary(this)">
-            Sarcopenia
-            <span class="glossary-arrow">▼</span>
-          </button>
-          <div class="glossary-def">
-            <p>Sarcopenia is the gradual loss of muscle mass and strength that comes with ageing, typically accelerating after 50. It's one of the primary drivers of frailty, falls, metabolic dysfunction, and loss of independence in later life. The good news: resistance training is the most effective prevention and treatment we have. This is why strength work is so central to everything we do.</p>
-          </div>
-        </div>
-
-        <div class="glossary-item">
-          <button class="glossary-term" onclick="toggleGlossary(this)">
-            Hormesis
-            <span class="glossary-arrow">▼</span>
-          </button>
-          <div class="glossary-def">
-            <p>Hormesis is the biological principle that small, manageable doses of stress can make you stronger, while too much of the same stress causes harm. Exercise is a perfect example: the physical stress of training breaks down muscle tissue, which then rebuilds stronger. Cold exposure, fasting, and certain dietary compounds work similarly. We use this principle deliberately in your programme.</p>
-          </div>
-        </div>
-
-        <div class="glossary-item">
-          <button class="glossary-term" onclick="toggleGlossary(this)">
-            Autophagy
-            <span class="glossary-arrow">▼</span>
-          </button>
-          <div class="glossary-def">
-            <p>Autophagy is your body's internal cleanup system, the process by which cells identify and break down damaged or dysfunctional components and recycle them. Think of it as cellular housekeeping. It declines with age and poor lifestyle habits. Sleep, fasting, and certain forms of exercise all stimulate it. It's one of the mechanisms through which healthy habits protect against disease and ageing at a cellular level.</p>
-          </div>
-        </div>
-
-        <div class="glossary-item">
-          <button class="glossary-term" onclick="toggleGlossary(this)">
-            Testosterone & Hormonal Health
-            <span class="glossary-arrow">▼</span>
-          </button>
-          <div class="glossary-def">
-            <p>Sex hormones naturally decline with age — testosterone in men, oestrogen and progesterone in women — typically from the late 30s onwards. This isn't inevitable doom, but it does have real effects: on energy, libido, body composition, mood, and cognitive function. We assess your hormonal picture carefully and work with both lifestyle interventions and, where appropriate, medical support to address any significant imbalances.</p>
-          </div>
-        </div>
-
-        <div class="glossary-item">
-          <button class="glossary-term" onclick="toggleGlossary(this)">
-            Chronic Inflammation
-            <span class="glossary-arrow">▼</span>
-          </button>
-          <div class="glossary-def">
-            <p>Acute inflammation is your body's healthy response to injury or infection. Chronic inflammation is something different: a persistent, low-grade inflammatory state that quietly damages tissues and organs over years. It's linked to almost every major age-related disease. Diet, sleep, stress, exercise, and body composition are all key levers for managing it.</p>
-          </div>
-        </div>
-
-        <div class="glossary-item">
-          <button class="glossary-term" onclick="toggleGlossary(this)">
-            Biological Age vs Chronological Age
-            <span class="glossary-arrow">▼</span>
-          </button>
-          <div class="glossary-def">
-            <p>Your chronological age is simply how many years you've been alive. Your biological age is how old your body actually is, measured through biomarkers like epigenetic methylation patterns, telomere length, and functional health markers. These two numbers often differ significantly, and biological age is the one we can actually influence. Many of our members find their biological age is meaningfully lower than their chronological age after a period of focused work.</p>
-          </div>
-        </div>
-
+        {% endfor %}
       </div>
     </div>
   </section>
@@ -865,9 +616,9 @@
     <div class="cta-nature-left"></div>
     <div class="cta-nature-right"></div>
     <div class="container cta-inner">
-      <div class="cta-badge">A gentle first step. No pressure.</div>
-      <h2>A Conversation Is a<br />Good Place to Start</h2>
-      <p>Book a free, unhurried 30-minute conversation with one of our health concierges. We'll listen carefully to where you are, what you're hoping for, and tell you honestly whether we think we can help. No pitch. No hard sell.</p>
+      <div class="cta-badge">{{ cta.badge }}</div>
+      <h2>{{ cta.heading }}</h2>
+      <p>{{ cta.subtext }}</p>
       <form class="cta-form" id="ctaForm" onsubmit="handleFormSubmit(event)">
         <div class="form-row">
           <input type="text" placeholder="Your Name" required class="form-input" />
@@ -877,21 +628,18 @@
           <input type="tel" placeholder="WhatsApp / Phone Number" class="form-input" />
           <select class="form-input form-select">
             <option value="" disabled selected>What's brought you here today?</option>
-            <option>I want more energy and vitality</option>
-            <option>I'd like to lose weight and improve my fitness</option>
-            <option>I have pain or injury I need help with</option>
-            <option>I want to understand my health markers</option>
-            <option>I want to sleep better</option>
-            <option>I'm not sure. I just know something needs to change</option>
+            {% for opt in cta.form_options %}
+            <option>{{ opt }}</option>
+            {% endfor %}
           </select>
         </div>
-        <button type="submit" class="btn btn-primary btn-lg btn-full">Book My Free Conversation →</button>
-        <p class="form-disclaimer">No spam, ever. Your details are safe with us. We'll be in touch within 24 hours.</p>
+        <button type="submit" class="btn btn-primary btn-lg btn-full">{{ cta.button_text }}</button>
+        <p class="form-disclaimer">{{ cta.disclaimer }}</p>
       </form>
       <div class="form-success" id="formSuccess" style="display:none;">
         <div class="success-icon">✓</div>
-        <h3>Thank you. We'll be in touch soon.</h3>
-        <p>One of our health concierges will reach out within 24 hours to arrange your free conversation. We're looking forward to hearing about you.</p>
+        <h3>{{ cta.success_heading }}</h3>
+        <p>{{ cta.success_body }}</p>
       </div>
     </div>
   </section>
