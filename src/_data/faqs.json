@@ -1,26 +1,28 @@
-[
-  {
-    "question": "Who is Healthspan Concierge for?",
-    "answer": "We work exclusively with adults aged 50 and above. Our members are typically busy professionals — executives, entrepreneurs, retirees — who want expert, coordinated support for their health without the hassle of finding and managing it all themselves. Some arrive in good shape and want to optimise. Others arrive having let things slide for years. Both are welcome."
-  },
-  {
-    "question": "Do I need to be fit or healthy to start?",
-    "answer": "Not at all. Most of our members start with us at exactly the point where they feel things have slipped. Whether you have chronic conditions, haven't exercised in years, or are carrying more weight than you'd like, we begin exactly where you are and move at a pace that's right for your body and your life."
-  },
-  {
-    "question": "Where are you based? Can I join from anywhere?",
-    "answer": "We have physical presences in Singapore, Hong Kong, Tokyo, Bangkok, Kuala Lumpur, Shanghai, Seoul, and Mumbai. We also offer a fully remote programme where we coordinate with trusted local providers in your city and deliver the rest virtually. Geography is rarely a barrier."
-  },
-  {
-    "question": "How much does it cost?",
-    "answer": "Membership is bespoke. It depends on what you need and the level of support that makes sense for you. Our free conversation will give you a clear, honest proposal. We have options ranging from focused single-service support to fully comprehensive concierge membership."
-  },
-  {
-    "question": "How is this different from a gym, a PT, or a health coach?",
-    "answer": "The difference is coordination and whole-person perspective. A personal trainer looks after your fitness. A nutritionist looks after your food. A doctor looks after your medical issues. None of them talk to each other. At Healthspan Concierge, your entire team shares information, works from a single integrated plan, and is managed by a dedicated concierge who knows you well. The result is something qualitatively different, and far more effective."
-  },
-  {
-    "question": "How long before I start to notice a difference?",
-    "answer": "Most members report meaningful changes in energy and sleep quality within the first 4 to 8 weeks. Body composition and biomarker improvements typically show clearly by the 3-month mark. The deeper changes in strength, metabolic health, and overall vitality build steadily over 6 to 12 months. We set honest expectations from the beginning, and track everything so you can see your own progress."
-  }
-]
+{
+  "questions": [
+    {
+      "question": "Who is Healthspan Concierge for?",
+      "answer": "We work exclusively with adults aged 50 and above. Our members are typically busy professionals — executives, entrepreneurs, retirees — who want expert, coordinated support for their health without the hassle of finding and managing it all themselves. Some arrive in good shape and want to optimise. Others arrive having let things slide for years. Both are welcome."
+    },
+    {
+      "question": "Do I need to be fit or healthy to start?",
+      "answer": "Not at all. Most of our members start with us at exactly the point where they feel things have slipped. Whether you have chronic conditions, haven't exercised in years, or are carrying more weight than you'd like, we begin exactly where you are and move at a pace that's right for your body and your life."
+    },
+    {
+      "question": "Where are you based? Can I join from anywhere?",
+      "answer": "We have physical presences in Singapore, Hong Kong, Tokyo, Bangkok, Kuala Lumpur, Shanghai, Seoul, and Mumbai. We also offer a fully remote programme where we coordinate with trusted local providers in your city and deliver the rest virtually. Geography is rarely a barrier."
+    },
+    {
+      "question": "How much does it cost?",
+      "answer": "Membership is bespoke. It depends on what you need and the level of support that makes sense for you. Our free conversation will give you a clear, honest proposal. We have options ranging from focused single-service support to fully comprehensive concierge membership."
+    },
+    {
+      "question": "How is this different from a gym, a PT, or a health coach?",
+      "answer": "The difference is coordination and whole-person perspective. A personal trainer looks after your fitness. A nutritionist looks after your food. A doctor looks after your medical issues. None of them talk to each other. At Healthspan Concierge, your entire team shares information, works from a single integrated plan, and is managed by a dedicated concierge who knows you well. The result is something qualitatively different, and far more effective."
+    },
+    {
+      "question": "How long before I start to notice a difference?",
+      "answer": "Most members report meaningful changes in energy and sleep quality within the first 4 to 8 weeks. Body composition and biomarker improvements typically show clearly by the 3-month mark. The deeper changes in strength, metabolic health, and overall vitality build steadily over 6 to 12 months. We set honest expectations from the beginning, and track everything so you can see your own progress."
+    }
+  ]
+}
